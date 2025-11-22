@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { DEBATE_CHARACTERS, CHARACTERS } from '@/lib/constants';
+import { DEBATE_CHARACTERS, CHARACTERS, findCharacterAvatar } from '@/lib/constants';
 import { ThumbsUp, User, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -102,11 +102,12 @@ export default function DebateBoard() {
       <div className="lg:col-span-2 space-y-6">
         {argumentsList.map(arg => {
           const charData = CHARACTERS.find(c => c.name.toLowerCase().includes(arg.character.toLowerCase()));
+          const avatarUrl = charData ? findCharacterAvatar(charData.avatarId) : null;
           return (
             <Card key={arg.id} className="bg-card/70">
               <CardHeader className="flex flex-row items-start gap-4">
-                {charData ? (
-                  <Image src={charData.avatar} alt={charData.name} width={48} height={48} className="rounded-full border" />
+                {avatarUrl ? (
+                  <Image src={avatarUrl} alt={charData!.name} width={48} height={48} className="rounded-full border" />
                 ) : (
                   <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center"><User /></div>
                 )}

@@ -59,6 +59,10 @@ export const TROY_MAP_LOCATIONS = [
 
 const findImage = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
 
+export const findCharacterAvatar = (avatarId: string) => {
+    return PlaceHolderImages.find(img => img.id === avatarId)?.imageUrl;
+};
+
 export const CHARACTERS = [
   {
     name: "HÉCTƠ (HECTOR)",
