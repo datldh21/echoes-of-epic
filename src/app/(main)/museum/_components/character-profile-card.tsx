@@ -8,21 +8,23 @@ import { Button } from '@/components/ui/button';
 import { generateAvatar } from '@/ai/flows/generate-ai-avatars';
 import { useToast } from '@/hooks/use-toast';
 import { Sparkles } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 type Character = {
   name: string;
-  avatar: string;
+  avatarId: string;
   description: string;
   info: Record<string, string>;
   stats: Record<string, number>;
   quote: string;
-  icons: Record<string, React.ElementType>;
 };
 
 export default function CharacterProfileCard({ character }: { character: Character }) {
   const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
-  const [avatarUrl, setAvatarUrl] = useState(character.avatar);
+
+  const initialAvatar = PlaceHolderImages.find(img => img.id === character.avatarId)?.imageUrl || '';
+  const [avatarUrl, setAvatarUrl] = useState(initialAvatar);
 
   const handleGenerateAvatar = () => {
     startTransition(async () => {

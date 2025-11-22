@@ -62,30 +62,27 @@ const findImage = (id: string) => PlaceHolderImages.find(img => img.id === id)?.
 export const CHARACTERS = [
   {
     name: "HÉCTƠ (HECTOR)",
-    avatar: findImage('hector-avatar'),
+    avatarId: 'hector-avatar',
     description: "Hoàng tử, tổng chỉ huy quân đội Troy. Một người chồng, người cha yêu thương gia đình nhưng đặt trách nhiệm với tổ quốc lên hàng đầu.",
     info: { "Quê quán": "Thành Troy", "Dòng dõi": "Vua Priam", "Sứ mệnh": "Bảo vệ thành Troy" },
     stats: { "Dũng cảm": 9, "Trí tuệ": 7, "Nghĩa tình": 10, "Cương nghị": 8 },
-    quote: "…chiến tranh là bổn phận của mỗi người đàn ông sinh ra ở thành Ilion này, và nhất là của ta.",
-    icons: { stat1: Shield, stat2: Brain, stat3: Heart, stat4: Scale }
+    quote: "…chiến tranh là bổn phận của mỗi người đàn ông sinh ra ở thành Ilion này, và nhất là của ta."
   },
   {
     name: "ĂNGĐRÔMÁC (ANDROMACHE)",
-    avatar: findImage('andromache-avatar'),
+    avatarId: 'andromache-avatar',
     description: "Vợ của Hector. Nàng đại diện cho tình yêu, gia đình và nỗi đau của người phụ nữ trong chiến tranh.",
     info: { "Quê quán": "Thebe", "Dòng dõi": "Vua Eetion", "Sứ mệnh": "Giữ gìn hạnh phúc gia đình" },
     stats: { "Dũng cảm": 6, "Trí tuệ": 8, "Nghĩa tình": 10, "Cương nghị": 7 },
-    quote: "Chàng ơi, lòng can đảm của chàng sẽ giết chết chàng, chàng không biết thương đứa con thơ dại của chúng ta ư…",
-    icons: { stat1: Shield, stat2: Brain, stat3: Heart, stat4: Scale }
+    quote: "Chàng ơi, lòng can đảm của chàng sẽ giết chết chàng, chàng không biết thương đứa con thơ dại của chúng ta ư…"
   },
   {
     name: "ASIN (ACHILLES)",
-    avatar: findImage('achilles-avatar'),
+    avatarId: 'achilles-avatar',
     description: "Chiến binh vĩ đại nhất của quân Hy Lạp. Sức mạnh phi thường nhưng bị chi phối bởi lòng kiêu hãnh và cơn thịnh nộ.",
     info: { "Quê quán": "Phthia", "Dòng dõi": "Nữ thần Thetis", "Sứ mệnh": "Giành vinh quang bất tử" },
     stats: { "Dũng cảm": 10, "Trí tuệ": 6, "Nghĩa tình": 5, "Cương nghị": 9 },
-    quote: "Thà chết trong vinh quang còn hơn sống trong tủi nhục.",
-    icons: { stat1: Shield, stat2: Brain, stat3: Heart, stat4: Scale }
+    quote: "Thà chết trong vinh quang còn hơn sống trong tủi nhục."
   },
 ];
 
