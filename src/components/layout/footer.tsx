@@ -16,8 +16,8 @@ const Footer = () => {
         </div>
 
         <Button asChild size="lg" className="group bg-primary hover:bg-primary/90">
-            <Link href="/debate">
-              Khám phá Diễn đàn
+            <Link href="/podcast">
+              KHÁM PHÁ PODCAST
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
         </Button>
