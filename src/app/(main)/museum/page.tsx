@@ -43,14 +43,14 @@ export default function MuseumPage() {
 
       <section className="mt-24 text-center">
           <h3 className="font-headline text-3xl text-primary flex items-center justify-center gap-3">
-            Lắng nghe tâm tư
+            KHÁM PHÁ PODCAST
           </h3>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Khám phá những câu chuyện và góc nhìn sâu sắc hơn qua các tập Podcast đặc biệt của chúng tôi.
+            Nơi bạn có thể lắng nghe những câu chuyện, những tâm sự của các nhân vật trong câu chuyện
           </p>
           <Button asChild size="lg" className="mt-8 group bg-primary hover:bg-primary/90">
             <Link href="/podcast">
-              Khám phá Podcast
+              KHÁM PHÁ PODCAST
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
@@ -58,5 +58,3 @@ export default function MuseumPage() {
     </div>
   )
 }
-
-    
