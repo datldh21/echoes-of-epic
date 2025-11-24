@@ -6,11 +6,13 @@ import { GitCompare } from "lucide-react";
 export default function LegacyPage() {
   return (
     <div className="flex-1 space-y-8 p-4 md:p-8">
-      <div className="text-center">
-        <h2 className="text-3xl font-bold tracking-tight font-headline text-primary">Nhịp Cầu Thời Gian</h2>
-        <p className="text-muted-foreground">
-          Soi chiếu giá trị sử thi vào cuộc sống hiện đại.
-        </p>
+      <div className="flex items-center justify-between space-y-2">
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight font-headline text-primary">Nhịp Cầu Thời Gian</h2>
+          <p className="text-muted-foreground">
+            Soi chiếu giá trị sử thi vào cuộc sống hiện đại.
+          </p>
+        </div>
       </div>
 
       <div className="grid gap-8">
@@ -59,7 +61,7 @@ export default function LegacyPage() {
           </CardHeader>
           <CardContent className="flex-grow">
              <Textarea 
-              placeholder="Nhập quan điểm của bạn..."
+              placeholder="Chia sẻ suy nghĩ của bạn..."
               className="h-full min-h-[200px] resize-none"
             />
           </CardContent>
