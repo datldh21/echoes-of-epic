@@ -12,7 +12,7 @@ export default function LegacyPage() {
         </p>
       </div>
 
-      <div className="grid gap-8">
+      <div className="grid gap-8 md:grid-cols-2">
         <Card className="flex flex-col">
           <CardHeader>
             <CardTitle className="font-headline text-xl">Anh hùng Sử thi</CardTitle>
@@ -20,13 +20,15 @@ export default function LegacyPage() {
               Quan niệm về người anh hùng trong sử thi Iliad.
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex-grow">
-            <Textarea 
-              placeholder="Nhập quan điểm của bạn về anh hùng sử thi..."
-              className="h-full min-h-[200px] resize-none"
-            />
+          <CardContent className="flex-grow flex justify-center">
+            <div className="w-full max-w-md">
+              <Textarea 
+                placeholder="Nhập quan điểm của bạn về anh hùng sử thi..."
+                className="h-full min-h-[200px] resize-none"
+              />
+            </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="justify-center">
             <Button>Gửi</Button>
           </CardFooter>
         </Card>
@@ -38,31 +40,35 @@ export default function LegacyPage() {
               Quan niệm về người anh hùng trong xã hội đương đại.
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex-grow">
-             <Textarea 
-              placeholder="Nhập quan điểm của bạn về anh hùng ngày nay..."
-              className="h-full min-h-[200px] resize-none"
-            />
+          <CardContent className="flex-grow flex justify-center">
+             <div className="w-full max-w-md">
+               <Textarea 
+                placeholder="Nhập quan điểm của bạn về anh hùng ngày nay..."
+                className="h-full min-h-[200px] resize-none"
+              />
+            </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="justify-center">
             <Button>Gửi</Button>
           </CardFooter>
         </Card>
 
-        <Card className="flex flex-col">
+        <Card className="flex flex-col md:col-span-2">
           <CardHeader>
             <CardTitle className="font-headline text-xl">Góc suy ngẫm</CardTitle>
             <CardDescription>
             Tuổi trẻ Việt Nam hôm nay cần làm gì để thể hiện trách nhiệm của bản thân đối với quê hương, đất nước?
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex-grow">
-             <Textarea 
-              placeholder="Chia sẻ suy nghĩ của bạn..."
-              className="h-full min-h-[200px] resize-none"
-            />
+          <CardContent className="flex-grow flex justify-center">
+             <div className="w-full max-w-2xl">
+               <Textarea 
+                placeholder="Chia sẻ suy nghĩ của bạn..."
+                className="h-full min-h-[200px] resize-none"
+              />
+            </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="justify-center">
             <Button>Gửi</Button>
           </CardFooter>
         </Card>
