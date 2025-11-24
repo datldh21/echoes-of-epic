@@ -51,7 +51,7 @@ export default function PodcastCard({ podcast }: { podcast: Podcast }) {
             alt={`Avatar of ${podcast.speaker}`}
             width={64}
             height={64}
-            className="rounded-full border-2 border-primary/30"
+            className="rounded-full border-2 border-primary/30 object-cover aspect-square"
           />
           <div>
             <CardTitle className="font-headline text-2xl text-primary">{podcast.title}</CardTitle>
@@ -64,13 +64,9 @@ export default function PodcastCard({ podcast }: { podcast: Podcast }) {
         {isPending && <p className="flex items-center text-sm text-primary mt-2"><Loader2 className="mr-2 h-4 w-4 animate-spin" />Đang xử lý...</p>}
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row gap-2">
-        <Button variant="outline" className="w-full sm:w-auto">
+        <Button variant="outline" className="w-full">
           <Play className="mr-2 h-4 w-4" />
           Phát Podcast
-        </Button>
-        <Button onClick={handleGenerateSummary} disabled={isPending} className="w-full sm:w-auto">
-          <Sparkles className="mr-2 h-4 w-4" />
-          {isPending ? "Đang tạo..." : "Tạo tóm tắt AI"}
         </Button>
       </CardFooter>
     </Card>
