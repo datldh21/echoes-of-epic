@@ -11,7 +11,7 @@ export default function MuseumRoom1() {
   return (
     <Card className="bg-card/50 border-0 shadow-none">
       <CardHeader>
-        <CardTitle className="font-headline text-3xl text-primary">Không gian chiến trận Iliad</CardTitle>
+        <CardTitle className="font-headline text-3xl text-primary text-center">Không gian chiến trận Iliad</CardTitle>
       </CardHeader>
       <CardContent className="space-y-12">
         {/* Timeline Section */}
