@@ -43,7 +43,7 @@ export default function MuseumPage() {
 
       <section className="mt-24 text-center">
           <h3 className="font-headline text-3xl text-primary flex items-center justify-center gap-3">
-            <Mic /> Lắng nghe tâm tư
+            Lắng nghe tâm tư
           </h3>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Khám phá những câu chuyện và góc nhìn sâu sắc hơn qua các tập Podcast đặc biệt của chúng tôi.
