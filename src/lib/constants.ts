@@ -77,7 +77,7 @@ export const CHARACTERS = [
     name: "ĂNGĐRÔMÁC (ANDROMACHE)",
     avatarId: 'andromache-avatar',
     description: "Vợ của Hector. Nàng đại diện cho tình yêu, gia đình và nỗi đau của người phụ nữ trong chiến tranh.",
-    info: { "Quê quán": "Thebe", "Dòng dõi": "Vua Eetion", "Sứ mệnh": "Giữ gìn hạnh phúc gia đình" },
+    info: { "Quê quán": "Thebe", "Dòng dõi": "Eetion", "Sứ mệnh": "Giữ gìn hạnh phúc gia đình" },
     qualities: [ "Vị tha", "Yêu thương", "Tinh tế", "Kiên cường" ],
     quote: "Chàng ơi, lòng can đảm của chàng sẽ giết chết chàng, chàng không biết thương đứa con thơ dại của chúng ta ư…"
   },
