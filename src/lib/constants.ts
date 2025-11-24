@@ -44,10 +44,10 @@ export const FEATURE_CARDS = [
 ];
 
 export const ILIAD_TIMELINE = [
-  { year: "Năm 1", event: "Paris bắt cóc Helen, chiến tranh bùng nổ.", icon: Flame },
-  { year: "Năm 2-8", event: "Giao tranh kéo dài, nhiều anh hùng hai phe ngã xuống.", icon: Flame },
-  { year: "Năm 9", event: "Achilles mâu thuẫn với Agamemnon, rút khỏi cuộc chiến.", icon: Flame },
-  { year: "Năm 10", event: "Hector giết Patroclus, Achilles báo thù. Ngựa gỗ và sự sụp đổ của Troy.", icon: Flame },
+    { year: "Năm 1", event: "Paris bắt cóc Helen, chiến tranh nổ ra." },
+    { year: "Năm 2-8", event: "Giao tranh kéo dài, nhiều anh hùng ngã xuống." },
+    { year: "Năm 9", event: "Achilles mâu thuẫn, rút khỏi cuộc chiến." },
+    { year: "Năm 10", event: "Ngựa gỗ và sự sụp đổ của thành Troy." },
 ];
 
 export const TROY_MAP_LOCATIONS = [
@@ -69,7 +69,7 @@ export const CHARACTERS = [
     avatarId: 'hector-avatar',
     description: "Hoàng tử, tổng chỉ huy quân đội Troy. Một người chồng, người cha yêu thương gia đình nhưng đặt trách nhiệm với tổ quốc lên hàng đầu.",
     info: { "Quê quán": "Thành Troy", "Dòng dõi": "Vua Priam", "Sứ mệnh": "Bảo vệ thành Troy" },
-    stats: { "Dũng cảm": 9, "Trí tuệ": 7, "Nghĩa tình": 10, "Cương nghị": 8 },
+    qualities: [ "Dũng cảm", "Trí tuệ", "Nghĩa tình", "Cương nghị" ],
     quote: "…chiến tranh là bổn phận của mỗi người đàn ông sinh ra ở thành Ilion này, và nhất là của ta."
   },
   {
@@ -77,7 +77,7 @@ export const CHARACTERS = [
     avatarId: 'andromache-avatar',
     description: "Vợ của Hector. Nàng đại diện cho tình yêu, gia đình và nỗi đau của người phụ nữ trong chiến tranh.",
     info: { "Quê quán": "Thebe", "Dòng dõi": "Vua Eetion", "Sứ mệnh": "Giữ gìn hạnh phúc gia đình" },
-    stats: { "Dũng cảm": 6, "Trí tuệ": 8, "Nghĩa tình": 10, "Cương nghị": 7 },
+    qualities: [ "Dũng cảm", "Trí tuệ", "Nghĩa tình", "Cương nghị" ],
     quote: "Chàng ơi, lòng can đảm của chàng sẽ giết chết chàng, chàng không biết thương đứa con thơ dại của chúng ta ư…"
   },
   {
@@ -85,7 +85,7 @@ export const CHARACTERS = [
     avatarId: 'achilles-avatar',
     description: "Chiến binh vĩ đại nhất của quân Hy Lạp. Sức mạnh phi thường nhưng bị chi phối bởi lòng kiêu hãnh và cơn thịnh nộ.",
     info: { "Quê quán": "Phthia", "Dòng dõi": "Nữ thần Thetis", "Sứ mệnh": "Giành vinh quang bất tử" },
-    stats: { "Dũng cảm": 10, "Trí tuệ": 6, "Nghĩa tình": 5, "Cương nghị": 9 },
+    qualities: [ "Dũng cảm", "Trí tuệ", "Nghĩa tình", "Cương nghị" ],
     quote: "Thà chết trong vinh quang còn hơn sống trong tủi nhục."
   },
 ];

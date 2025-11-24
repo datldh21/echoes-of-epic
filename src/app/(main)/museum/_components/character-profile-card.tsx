@@ -11,7 +11,7 @@ type Character = {
   avatarId: string;
   description: string;
   info: Record<string, string>;
-  stats: Record<string, number>;
+  qualities: string[];
   quote: string;
 };
 
@@ -27,7 +27,7 @@ export default function CharacterProfileCard({ character }: { character: Charact
           alt={`Avatar of ${character.name}`}
           width={80}
           height={80}
-          className="rounded-full border-2 border-primary/50 object-cover"
+          className="rounded-full border-2 border-primary/50 object-cover aspect-square"
         />
         <div>
           <CardTitle className="font-headline text-xl text-primary">{character.name}</CardTitle>
@@ -38,10 +38,10 @@ export default function CharacterProfileCard({ character }: { character: Charact
         <p className="text-sm text-muted-foreground">{character.description}</p>
         <div>
           <h4 className="font-semibold mb-3">Phẩm chất sử thi</h4>
-          <div className="flex flex-wrap gap-2">
-            {Object.keys(character.stats).map((key) => (
-              <Badge key={key} variant="secondary" className="font-normal">
-                {key}
+          <div className="grid grid-cols-2 gap-2">
+            {character.qualities.map((quality) => (
+              <Badge key={quality} variant="secondary" className="font-normal justify-center">
+                {quality}
               </Badge>
             ))}
           </div>
