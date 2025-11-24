@@ -2,6 +2,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import MuseumRoom1 from "./_components/museum-room1";
 import MuseumRoom2 from "./_components/museum-room2";
 import MuseumRoom3 from "./_components/museum-room3";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight, Mic } from "lucide-react";
 
 export default function MuseumPage() {
   return (
@@ -32,6 +35,21 @@ export default function MuseumPage() {
           </TabsContent>
         </div>
       </Tabs>
+
+      <section className="mt-24 text-center">
+          <h3 className="font-headline text-3xl text-primary flex items-center justify-center gap-3">
+            <Mic /> Lắng nghe tâm tư
+          </h3>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Khám phá những câu chuyện và góc nhìn sâu sắc hơn qua các tập Podcast đặc biệt của chúng tôi.
+          </p>
+          <Button asChild size="lg" className="mt-8 group bg-primary hover:bg-primary/90">
+            <Link href="/podcast">
+              Khám phá Podcast
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
+        </section>
     </div>
   )
 }
