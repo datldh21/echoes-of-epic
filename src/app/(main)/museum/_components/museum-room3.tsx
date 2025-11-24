@@ -44,14 +44,11 @@ export default function MuseumRoom3() {
               <Input id="q2" placeholder="Chia sẻ suy nghĩ của bạn..." />
             </div>
 
-            <Card className="bg-primary/5 border-primary/20">
-                <CardHeader>
-                    <CardTitle className="font-headline text-2xl text-primary/80 text-center">BẢO VỆ TROY</CardTitle>
-                    <CardDescription className="text-center">
-                        Bạn là người lãnh đạo của Troy. Tình thế ngàn cân treo sợi tóc. Hãy chọn chiến lược của mình.
-                    </CardDescription>
+            <Card className="bg-transparent border-0 shadow-none">
+                <CardHeader className="p-0">
+                    <p className="text-lg font-semibold text-foreground/90">Bạn là người lãnh đạo của Troy. Tình thế ngàn cân treo sợi tóc. Hãy chọn chiến lược của mình.</p>
                 </CardHeader>
-                <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
+                <CardContent className="flex flex-col sm:flex-row gap-4 justify-center px-0 pt-4 pb-0">
                     {choices.map((choice, index) => {
                       const Icon = choice.icon;
                       return (
@@ -67,7 +64,7 @@ export default function MuseumRoom3() {
                     })}
                 </CardContent>
                  {selectedChoice !== null && (
-                  <CardFooter className="flex-col items-start p-6">
+                  <CardFooter className="flex-col items-start p-0 pt-6">
                       <CardTitle className="font-headline text-xl text-primary flex items-center gap-3 mb-2">
                         <Info /> Kết quả chiến lược
                       </CardTitle>
