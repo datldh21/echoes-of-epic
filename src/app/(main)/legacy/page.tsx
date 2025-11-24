@@ -28,12 +28,12 @@ export default function LegacyPage() {
               </CardHeader>
               <CardContent>
                 <Textarea
-                  placeholder="Nhập định nghĩa của bạn về Anh hùng Sử thi..."
+                  placeholder="Nhập định nghĩa của bạn..."
                   rows={8}
                 />
               </CardContent>
               <CardFooter>
-                <Button variant="outline">Lưu</Button>
+                <Button variant="outline">Gửi</Button>
               </CardFooter>
             </Card>
             <Card className="bg-card/50">
@@ -42,12 +42,12 @@ export default function LegacyPage() {
               </CardHeader>
               <CardContent>
                 <Textarea
-                  placeholder="Nhập định nghĩa của bạn về Anh hùng Hôm nay..."
+                  placeholder="Nhập định nghĩa của bạn..."
                   rows={8}
                 />
               </CardContent>
               <CardFooter>
-                <Button variant="outline">Lưu</Button>
+                <Button variant="outline">Gửi</Button>
               </CardFooter>
             </Card>
           </div>
