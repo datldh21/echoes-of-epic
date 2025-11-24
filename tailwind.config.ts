@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Lora', 'Inter', 'serif'],
-        headline: ['Cinzel', 'serif'],
+        headline: ['EB Garamond', 'serif'],
         code: ['monospace'],
       },
       colors: {
