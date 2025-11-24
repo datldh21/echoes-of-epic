@@ -15,7 +15,7 @@ const studentWorks = [
 export default function MuseumRoom3() {
   return (
     <Card className="bg-card/50 border-0 shadow-none">
-      <CardHeader>
+      <CardHeader className="text-center">
         <CardTitle className="font-headline text-3xl text-primary">Không gian cảm xúc gia đình</CardTitle>
         <CardDescription>Trưng bày các tác phẩm sáng tạo của học sinh và không gian để bạn chia sẻ cảm nghĩ.</CardDescription>
       </CardHeader>
@@ -44,7 +44,7 @@ export default function MuseumRoom3() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-headline mb-6 text-foreground/80">Góc tương tác</h3>
+          <h3 className="text-center text-2xl font-headline mb-6 text-foreground/80">Góc tương tác</h3>
           <div className="space-y-8 max-w-2xl mx-auto">
             <div className="space-y-2">
               <label htmlFor="q1" className="text-lg font-semibold text-foreground/90">Nếu bạn là Andromache, bạn sẽ nói thêm điều gì với Hector trước khi chàng ra trận?</label>
