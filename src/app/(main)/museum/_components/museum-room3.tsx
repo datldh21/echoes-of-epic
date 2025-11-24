@@ -33,7 +33,7 @@ export default function MuseumRoom3() {
                         <work.icon className="w-12 h-12 text-white/80" />
                     </div>
                   </div>
-                  <CardHeader>
+                  <CardHeader className="text-center">
                     <CardTitle className="text-lg">{work.title}</CardTitle>
                     <CardDescription>{work.type}</CardDescription>
                   </CardHeader>
