@@ -79,7 +79,9 @@ export default function MuseumRoom3() {
               <label htmlFor="q3" className="text-lg font-semibold text-foreground/90">Khoảnh khắc Hector bế con trai Astyanax gợi cho bạn liên tưởng gì đến hình ảnh người cha trong cuộc sống hôm nay?</label>
               <Input id="q3" placeholder="Chia sẻ liên tưởng của bạn..." />
             </div>
-            <Button className='w-full sm:w-auto'>Gửi câu trả lời</Button>
+             <div className="flex justify-center">
+              <Button>Gửi câu trả lời</Button>
+            </div>
           </div>
         </div>
       </CardContent>
