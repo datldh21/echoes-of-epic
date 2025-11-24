@@ -8,7 +8,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { generateIliadArtwork } from '@/ai/flows/generate-iliad-artwork';
 import { Loader2, Sparkles, Wand2, Image as ImageIcon } from 'lucide-react';
-import { Skeleton } from '@/components/ui/skeleton';
 
 const examplePrompts = [
     "Hector tháo chiếc mũ trụ sáng loáng cho con trai Astyanax đỡ sợ.",
@@ -19,11 +18,19 @@ const examplePrompts = [
 export default function ArtGenerator() {
     const { toast } = useToast();
     const [isPending, startTransition] = useTransition();
-    const [prompt, setPrompt] = useState(examplePrompts[0]);
+    const [prompt, setPrompt] = useState('');
     const [generatedArt, setGeneratedArt] = useState<string | null>(null);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        if (!prompt) {
+            toast({
+                variant: "destructive",
+                title: "Vui lòng nhập mô tả",
+                description: "Bạn cần mô tả một cảnh để AI có thể vẽ.",
+            });
+            return;
+        }
         setGeneratedArt(null);
 
         startTransition(async () => {
@@ -67,21 +74,25 @@ export default function ArtGenerator() {
                                 onChange={(e) => setPrompt(e.target.value)}
                                 placeholder="VD: Hector tháo mũ trụ cho con trai..."
                                 rows={5}
-                                required
                             />
                         </div>
-                        <div className="flex flex-col sm:flex-row gap-2">
-                             <Button type="submit" disabled={isPending || !prompt} className="w-full">
-                                {isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4" />}
-                                {isPending ? 'Đang vẽ...' : 'Tạo tranh'}
-                            </Button>
-                            <Button type="button" variant="outline" className="w-full" onClick={() => setPrompt(examplePrompts[Math.floor(Math.random() * examplePrompts.length)])}>
-                                Thử một cảnh khác
-                            </Button>
+                        <div className="space-y-2">
+                             <p className="text-sm text-muted-foreground">Hoặc thử một vài gợi ý:</p>
+                             <div className="flex flex-col sm:flex-row gap-2">
+                                {examplePrompts.slice(0, 2).map((p) => (
+                                    <Button key={p} type="button" variant="outline" size="sm" className="flex-1 text-xs h-auto py-2" onClick={() => setPrompt(p)}>
+                                        {p}
+                                    </Button>
+                                ))}
+                             </div>
                         </div>
+                        <Button type="submit" disabled={isPending || !prompt} className="w-full">
+                           {isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4" />}
+                           {isPending ? 'Đang vẽ...' : 'Vẽ tranh'}
+                       </Button>
                     </form>
 
-                    <div className="flex flex-col items-center justify-center border border-dashed rounded-lg p-4 bg-background/50">
+                    <div className="flex flex-col items-center justify-center border border-dashed rounded-lg p-4 bg-background/50 min-h-[250px]">
                         {isPending ? (
                              <div className="w-full aspect-video flex flex-col items-center justify-center">
                                 <Loader2 className="w-10 h-10 text-primary animate-spin" />
@@ -98,7 +109,8 @@ export default function ArtGenerator() {
                         ) : (
                             <div className="text-center text-muted-foreground">
                                 <ImageIcon className="mx-auto h-12 w-12" />
-                                <p className="mt-2">Bức tranh bạn tạo sẽ xuất hiện ở đây.</p>
+                                <p className="mt-2 font-semibold">Tác phẩm của bạn</p>
+                                <p className="mt-1 text-sm">Bức tranh bạn tạo sẽ xuất hiện ở đây.</p>
                             </div>
                         )}
                     </div>
