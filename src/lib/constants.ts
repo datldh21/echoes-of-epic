@@ -69,7 +69,7 @@ export const CHARACTERS = [
     avatarId: 'hector-avatar',
     description: "Hoàng tử, tổng chỉ huy quân đội Troy. Một người chồng, người cha yêu thương gia đình nhưng đặt trách nhiệm với tổ quốc lên hàng đầu.",
     info: { "Quê quán": "Thành Troy", "Dòng dõi": "Vua Priam", "Sứ mệnh": "Bảo vệ thành Troy" },
-    qualities: [ "Dũng cảm", "Trí tuệ", "Nghĩa tình", "Cương nghị" ],
+    qualities: [ "Dũng cảm", "Trách nhiệm", "Yêu thương", "Danh dự" ],
     quote: "…chiến tranh là bổn phận của mỗi người đàn ông sinh ra ở thành Ilion này, và nhất là của ta."
   },
   {
@@ -77,7 +77,7 @@ export const CHARACTERS = [
     avatarId: 'andromache-avatar',
     description: "Vợ của Hector. Nàng đại diện cho tình yêu, gia đình và nỗi đau của người phụ nữ trong chiến tranh.",
     info: { "Quê quán": "Thebe", "Dòng dõi": "Vua Eetion", "Sứ mệnh": "Giữ gìn hạnh phúc gia đình" },
-    qualities: [ "Dũng cảm", "Trí tuệ", "Nghĩa tình", "Cương nghị" ],
+    qualities: [ "Vị tha", "Yêu thương", "Tinh tế", "Kiên cường" ],
     quote: "Chàng ơi, lòng can đảm của chàng sẽ giết chết chàng, chàng không biết thương đứa con thơ dại của chúng ta ư…"
   },
   {
@@ -85,7 +85,7 @@ export const CHARACTERS = [
     avatarId: 'achilles-avatar',
     description: "Chiến binh vĩ đại nhất của quân Hy Lạp. Sức mạnh phi thường nhưng bị chi phối bởi lòng kiêu hãnh và cơn thịnh nộ.",
     info: { "Quê quán": "Phthia", "Dòng dõi": "Nữ thần Thetis", "Sứ mệnh": "Giành vinh quang bất tử" },
-    qualities: [ "Dũng cảm", "Trí tuệ", "Nghĩa tình", "Cương nghị" ],
+    qualities: [ "Mạnh mẽ", "Kiêu hãnh", "Bất khuất", "Căm hờn" ],
     quote: "Thà chết trong vinh quang còn hơn sống trong tủi nhục."
   },
 ];
