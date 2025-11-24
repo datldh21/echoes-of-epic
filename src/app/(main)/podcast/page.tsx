@@ -23,15 +23,12 @@ export default function PodcastPage() {
         </div>
 
         <section className="mt-24 text-center">
-            <h3 className="font-headline text-3xl text-primary flex items-center justify-center gap-3">
-              <Wand2 /> Tự Tay Sáng Tạo
-            </h3>
             <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
               Sử dụng AI để tạo ra những tác phẩm nghệ thuật độc đáo lấy cảm hứng từ câu chuyện sử thi.
             </p>
             <Button asChild size="lg" className="mt-8 group bg-primary hover:bg-primary/90">
               <Link href="/gallery">
-                Khám phá Gallery
+                Khám phá Xưởng sáng tạo
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
