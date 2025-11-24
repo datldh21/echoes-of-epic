@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ILIAD_TIMELINE, TROY_MAP_LOCATIONS } from '@/lib/constants';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight } from 'lucide-react';
+import { Flame } from 'lucide-react';
 
 export default function MuseumRoom1() {
   const mapImage = PlaceHolderImages.find(img => img.id === 'troy-map');
@@ -17,24 +17,28 @@ export default function MuseumRoom1() {
         {/* Timeline Section */}
         <div>
           <h3 className="text-2xl font-headline mb-6 text-foreground/80">Timeline 10 năm cuộc chiến</h3>
-          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-            {ILIAD_TIMELINE.map((item, index) => (
-              <div key={item.year} className="flex items-start gap-4">
-                  <div className="flex flex-col text-left">
-                    <span className="font-bold text-lg text-primary">{item.year}</span>
-                    <p className="text-sm text-muted-foreground mt-1">{item.event}</p>
+          <div className="relative w-full">
+            {/* Timeline line */}
+            <div className="absolute top-10 left-0 w-full h-0.5 bg-border -z-10"></div>
+            
+            <div className="grid grid-cols-4 gap-4">
+              {ILIAD_TIMELINE.map((item, index) => (
+                <div key={item.year} className="flex flex-col items-center text-center">
+                  {/* Timeline Point */}
+                  <div className="relative bg-background p-1.5 rounded-full border-2 border-primary mb-3">
+                     <Flame className="w-6 h-6 text-primary" />
                   </div>
-
-                  {/* Connecting Lines */}
-                  {index < ILIAD_TIMELINE.length - 1 && (
-                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block">
-                        {index === 0 && <div className="w-12 h-px bg-border absolute -left-6 top-[-3.5rem]"></div>}
-                        {index === 1 && <div className="h-16 w-px bg-border absolute -left-6 top-[-4.5rem]"></div>}
-                        {index === 2 && <div className="w-12 h-px bg-border absolute -left-6 top-[3.5rem]"></div>}
-                     </div>
-                  )}
-              </div>
-            ))}
+                  
+                  {/* Content */}
+                  <div>
+                    <span className="font-bold text-lg text-primary">{item.year}</span>
+                    <p className="text-xs text-muted-foreground mt-1 leading-snug">
+                      {item.event}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

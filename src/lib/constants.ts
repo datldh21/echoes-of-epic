@@ -44,10 +44,10 @@ export const FEATURE_CARDS = [
 ];
 
 export const ILIAD_TIMELINE = [
-  { year: "Năm 1", event: "Cuộc chiến bắt đầu với sự kiện Paris bắt cóc Helen.", icon: Flame },
-  { year: "Năm 2-8", event: "Giao tranh kéo dài, nhiều anh hùng của cả hai phe đã ngã xuống.", icon: Flame },
-  { year: "Năm 9", event: "Mâu thuẫn giữa Achilles và Agamemnon, Achilles rút khỏi cuộc chiến.", icon: Flame },
-  { year: "Năm 10", event: "Hector giết Patroclus. Achilles trở lại, giết Hector. Con ngựa gỗ và sự sụp đổ của thành Troy.", icon: Flame },
+  { year: "Năm 1", event: "Paris bắt cóc Helen, chiến tranh bùng nổ.", icon: Flame },
+  { year: "Năm 2-8", event: "Giao tranh kéo dài, nhiều anh hùng hai phe ngã xuống.", icon: Flame },
+  { year: "Năm 9", event: "Achilles mâu thuẫn với Agamemnon, rút khỏi cuộc chiến.", icon: Flame },
+  { year: "Năm 10", event: "Hector giết Patroclus, Achilles báo thù. Ngựa gỗ và sự sụp đổ của Troy.", icon: Flame },
 ];
 
 export const TROY_MAP_LOCATIONS = [
