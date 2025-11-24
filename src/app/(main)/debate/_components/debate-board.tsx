@@ -107,7 +107,7 @@ export default function DebateBoard() {
             <Card key={arg.id} className="bg-card/70">
               <CardHeader className="flex flex-row items-start gap-4">
                 {avatarUrl ? (
-                  <Image src={avatarUrl} alt={charData!.name} width={48} height={48} className="rounded-full border" />
+                  <Image src={avatarUrl} alt={charData!.name} width={48} height={48} className="rounded-full border object-cover aspect-square" />
                 ) : (
                   <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center"><User /></div>
                 )}
