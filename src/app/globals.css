@@ -35,25 +35,25 @@ body {
   }
 
   .dark {
-    --background: 240 10% 10%; /* Near Black */
+    --background: 0 0% 8%; /* Very dark, almost black */
     --foreground: 35 33% 90%; /* Parchment */
-    --card: 240 10% 12%; /* Slightly lighter black */
+    --card: 0 0% 12%; /* Slightly lighter black */
     --card-foreground: 35 33% 90%;
-    --popover: 240 10% 10%;
+    --popover: 0 0% 8%;
     --popover-foreground: 35 33% 90%;
-    --primary: 35 33% 85%; /* Parchment for buttons/primary elements */
-    --primary-foreground: 240 10% 3.9%; /* Near Black for button text */
-    --secondary: 240 10% 15%;
+    --primary: 30 30% 65%; /* Muted gold/brown for buttons/primary elements */
+    --primary-foreground: 0 0% 10%; /* Near Black for button text */
+    --secondary: 0 0% 15%;
     --secondary-foreground: 35 33% 90%;
-    --muted: 240 10% 15%;
+    --muted: 0 0% 15%;
     --muted-foreground: 35 25% 70%;
-    --accent: 35 33% 85%;
-    --accent-foreground: 240 10% 3.9%;
+    --accent: 30 30% 65%;
+    --accent-foreground: 0 0% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 10% 20%;
-    --input: 240 10% 20%;
-    --ring: 35 33% 85%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 30 30% 75%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
