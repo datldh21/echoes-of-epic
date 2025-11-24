@@ -82,7 +82,6 @@ export default function HomePage() {
           <div>
              <h3 className="font-headline text-3xl text-primary mb-6">Ý nghĩa của dự án</h3>
              <div className="space-y-6">
-                <p className="text-lg text-muted-foreground">Dự án mang lại những giá trị nổi bật:</p>
                 {projectMeanings.map((meaning, index) => (
                   <div key={index} className="flex items-start gap-4">
                      <div className="flex-shrink-0 rounded-full bg-primary/10 p-2 text-primary mt-1">
