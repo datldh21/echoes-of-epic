@@ -6,13 +6,11 @@ import { GitCompare } from "lucide-react";
 export default function LegacyPage() {
   return (
     <div className="flex-1 space-y-8 p-4 md:p-8">
-      <div className="flex items-center justify-between space-y-2">
-        <div>
-          <h2 className="text-3xl font-bold tracking-tight font-headline text-primary">Nhịp Cầu Thời Gian</h2>
-          <p className="text-muted-foreground">
-            Soi chiếu giá trị sử thi vào cuộc sống hiện đại.
-          </p>
-        </div>
+      <div className="text-center">
+        <h2 className="text-3xl font-bold tracking-tight font-headline text-primary">Nhịp Cầu Thời Gian</h2>
+        <p className="text-muted-foreground mt-2">
+          Soi chiếu giá trị sử thi vào cuộc sống hiện đại.
+        </p>
       </div>
 
       <div className="grid gap-8">
