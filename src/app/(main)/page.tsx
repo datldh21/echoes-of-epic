@@ -44,6 +44,9 @@ export default function HomePage() {
           <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl drop-shadow-2xl text-primary">
             ÂM VANG SỬ THI
           </h1>
+          <p className="font-headline text-4xl md:text-6xl lg:text-7xl drop-shadow-2xl text-primary/90 mt-2">
+            Thành Troy
+          </p>
           <p className="mt-4 max-w-2xl font-body text-lg md:text-xl text-balance text-foreground/90 drop-shadow-lg">
           Dự án học tập số khám phá trích đoạn “Héctơ từ biệt Ăngđrômác” trong sử thi Iliad của Homer
           </p>
