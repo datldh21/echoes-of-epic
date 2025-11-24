@@ -9,24 +9,24 @@ body {
 @layer base {
   :root {
     --background: 45 45% 96%; /* Lighter, warmer parchment */
-    --foreground: 30 40% 10%; /* Dark sepia/brown */
+    --foreground: 0 0% 0%; /* Black */
     --card: 45 40% 93%; /* Slightly darker parchment for cards */
-    --card-foreground: 30 40% 10%;
+    --card-foreground: 0 0% 0%; /* Black */
     --popover: 45 45% 96%;
-    --popover-foreground: 30 40% 10%;
-    --primary: 30 35% 30%; /* A deep, warm brown for primary actions */
+    --popover-foreground: 0 0% 0%; /* Black */
+    --primary: 0 0% 0%; /* Black */
     --primary-foreground: 45 40% 95%; /* Creamy white for text on primary */
     --secondary: 35 30% 88%; /* A muted, slightly darker parchment */
-    --secondary-foreground: 30 35% 25%;
+    --secondary-foreground: 0 0% 0%; /* Black */
     --muted: 35 30% 88%;
     --muted-foreground: 30 25% 40%;
     --accent: 35 30% 85%; /* Muted accent */
-    --accent-foreground: 30 35% 20%;
+    --accent-foreground: 0 0% 0%; /* Black */
     --destructive: 0 70% 40.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 35 25% 80%;
     --input: 35 25% 85%;
-    --ring: 30 35% 30%;
+    --ring: 0 0% 0%; /* Black */
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
