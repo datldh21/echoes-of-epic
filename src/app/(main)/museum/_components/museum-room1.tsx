@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { ILIAD_TIMELINE, TROY_MAP_LOCATIONS } from '@/lib/constants';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { ArrowRight } from 'lucide-react';
 
 export default function MuseumRoom1() {
   const mapImage = PlaceHolderImages.find(img => img.id === 'troy-map');
@@ -17,22 +17,25 @@ export default function MuseumRoom1() {
         {/* Timeline Section */}
         <div>
           <h3 className="text-2xl font-headline mb-6 text-foreground/80">Timeline 10 năm cuộc chiến</h3>
-          <ScrollArea className="w-full whitespace-nowrap rounded-lg border border-dashed border-border p-4">
-            <div className="flex w-max space-x-8">
-              {ILIAD_TIMELINE.map((item, index) => (
-                <div key={item.year} className="flex items-center gap-4">
-                  <div className="flex flex-col text-center">
+          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            {ILIAD_TIMELINE.map((item, index) => (
+              <div key={item.year} className="flex items-start gap-4">
+                  <div className="flex flex-col text-left">
                     <span className="font-bold text-lg text-primary">{item.year}</span>
-                    <p className="text-sm text-muted-foreground whitespace-pre-wrap w-48">{item.event}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{item.event}</p>
                   </div>
+
+                  {/* Connecting Lines */}
                   {index < ILIAD_TIMELINE.length - 1 && (
-                    <div className="h-px w-24 bg-border" />
+                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block">
+                        {index === 0 && <div className="w-12 h-px bg-border absolute -left-6 top-[-3.5rem]"></div>}
+                        {index === 1 && <div className="h-16 w-px bg-border absolute -left-6 top-[-4.5rem]"></div>}
+                        {index === 2 && <div className="w-12 h-px bg-border absolute -left-6 top-[3.5rem]"></div>}
+                     </div>
                   )}
-                </div>
-              ))}
-            </div>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Interactive Map Section */}
