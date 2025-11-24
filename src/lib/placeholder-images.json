@@ -87,25 +87,25 @@
     {
       "id": "artifact-pottery",
       "description": "Ancient Greek pottery depicting warriors in battle, reminiscent of the Trojan War.",
-      "imageUrl": "https://images.unsplash.com/photo-1761472013094-0daf2e234053?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhbmNpZW50JTIwcG90dGVyeXxlbnwwfHx8fDE3NjM5NTkyMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1761472013094-0daf2e234053?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhbmNpZW50JTIwcG90dGVyeXxlbnwwfDB8fHwxNzMxNTAyNjMxfDE&ixlib=rb-4.0.3&q=85&w=1080",
       "imageHint": "ancient pottery"
     },
     {
       "id": "artifact-helmet",
       "description": "A well-preserved ancient Greek helmet, of the type worn by heroes like Hector and Achilles.",
-      "imageUrl": "https://images.unsplash.com/photo-1575419001506-ca514725329c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxncmVlayUyMGhlbG1ldHxlbnwwfHx8fDE3NjM5NTkyMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1575419001506-ca514725329c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxncmVlayUyMGhlbG1ldHxlbnwwfDB8fHwxNzMxNTAyNjg1fDE&ixlib=rb-4.0.3&q=85&w=1080",
       "imageHint": "greek helmet"
     },
     {
       "id": "artifact-ruins",
       "description": "The ruins of an ancient Greek temple, evoking the lost city of Troy.",
-      "imageUrl": "https://images.unsplash.com/photo-1717518213995-455025e3b0bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YW5jaWVudCUyMHJ1aW5zfGVufDB8fHx8MTc2Mzk1NjIyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1717518213995-455025e3b0bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YW5jaWVudCUyMHJ1aW5zfGVufDB8MHx8fDE3MzE1MDI3MTl8MQ&ixlib=rb-4.0.3&q=85&w=1080",
       "imageHint": "ancient ruins"
     },
     {
       "id": "artifact-shield",
       "description": "A close-up of an ornate ancient Greek shield, perhaps like the one Achilles carried.",
-      "imageUrl": "https://images.unsplash.com/photo-1728245779577-6fc5193892ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxncmVlayUyMHNoaWVsZHxlbnwwfHx8fDE3NjM5NTkyMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1728245779577-6fc5193892ad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxncmVlayUyMHNoaWVsZHxlbnwwfDB8fHwxNzMxNTAyNzQ3fDE&ixlib=rb-4.0.3&q=85&w=1080",
       "imageHint": "greek shield"
     }
   ]
