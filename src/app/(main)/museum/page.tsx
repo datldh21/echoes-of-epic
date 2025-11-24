@@ -5,6 +5,7 @@ import MuseumRoom3 from "./_components/museum-room3";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Mic } from "lucide-react";
+import MuseumRoom4 from "./_components/museum-room4";
 
 export default function MuseumPage() {
   return (
@@ -12,15 +13,16 @@ export default function MuseumPage() {
       <header className="text-center mb-12">
         <h1 className="font-headline text-5xl md:text-6xl text-primary">DẤU ẤN SỬ THI</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          Hành trình khám phá thế giới của Iliad qua ba không gian trưng bày.
+          Hành trình khám phá thế giới của Iliad qua bốn không gian trưng bày.
         </p>
       </header>
 
       <Tabs defaultValue="room1" className="w-full">
-        <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 max-w-2xl mx-auto h-auto sm:h-12">
+        <TabsList className="grid w-full grid-cols-1 sm:grid-cols-4 max-w-3xl mx-auto h-auto sm:h-12">
           <TabsTrigger value="room1" className="py-2.5 text-base">Phòng 1: Chiến trận</TabsTrigger>
           <TabsTrigger value="room2" className="py-2.5 text-base">Phòng 2: Nhân vật</TabsTrigger>
           <TabsTrigger value="room3" className="py-2.5 text-base">Phòng 3: Cảm xúc</TabsTrigger>
+          <TabsTrigger value="room4" className="py-2.5 text-base">Phòng 4: Hiện vật</TabsTrigger>
         </TabsList>
 
         <div className="mt-8">
@@ -32,6 +34,9 @@ export default function MuseumPage() {
           </TabsContent>
           <TabsContent value="room3">
             <MuseumRoom3 />
+          </TabsContent>
+          <TabsContent value="room4">
+            <MuseumRoom4 />
           </TabsContent>
         </div>
       </Tabs>
