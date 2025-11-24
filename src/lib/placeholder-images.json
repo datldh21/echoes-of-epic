@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "troy-gate-banner",
-      "description": "The ancient city of Troy, with its famous walls and structures under a dramatic sky.",
-      "imageUrl": "https://images.unsplash.com/photo-1596634125368-c31a742b7a9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXR5JTIwb2YlMjB0cm95fGVufDB8fHx8MTc2Mzk0MjAwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "city troy"
+      "description": "A grand, ancient gate, suggesting the entrance to the epic city of Troy.",
+      "imageUrl": "https://images.unsplash.com/photo-1528459176878-181b57a510a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhbmNpZW50JTIwZ2F0ZXxlbnwwfHx8fDE3NjM5NDI3OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient gate"
     },
     {
       "id": "troy-map",
