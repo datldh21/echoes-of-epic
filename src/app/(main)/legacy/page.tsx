@@ -53,7 +53,7 @@ export default function LegacyPage() {
             <CardHeader>
               <CardTitle className="font-headline text-2xl text-primary">Góc Suy Ngẫm</CardTitle>
               <CardDescription>
-                Thanh niên Việt Nam ngày nay đối mặt với lựa chọn giữa cống hiến cho xã hội và theo đuổi hạnh phúc cá nhân như thế nào?
+              Tuổi trẻ Việt Nam hôm nay cần làm gì để thể hiện trách nhiệm của bản thân đối với quê hương, đất nước?
               </CardDescription>
             </CardHeader>
             <CardContent>
