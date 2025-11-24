@@ -30,7 +30,6 @@ export default function LegacyPage() {
                 <Textarea
                   placeholder="Nhập định nghĩa của bạn về Anh hùng Sử thi..."
                   rows={8}
-                  defaultValue="Đặc điểm: Sức mạnh phi thường, lòng dũng cảm, theo đuổi vinh quang cá nhân và danh dự bộ tộc.\n\nXung đột: Giữa định mệnh và ý chí tự do, giữa tình cảm cá nhân và trách nhiệm cộng đồng.\n\nVí dụ: Hector, Achilles."
                 />
               </CardContent>
               <CardFooter>
@@ -45,7 +44,6 @@ export default function LegacyPage() {
                 <Textarea
                   placeholder="Nhập định nghĩa của bạn về Anh hùng Hôm nay..."
                   rows={8}
-                  defaultValue="Đặc điểm: Lòng nhân ái, trí tuệ, sự cống hiến thầm lặng, dám đấu tranh cho lẽ phải và cộng đồng.\n\nXung đột: Giữa lý tưởng và thực tế, giữa lợi ích cá nhân và sự tiến bộ xã hội.\n\nVí dụ: Các nhà khoa học, bác sĩ, nhà hoạt động xã hội..."
                 />
               </CardContent>
               <CardFooter>
