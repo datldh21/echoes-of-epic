@@ -88,15 +88,10 @@ export default {
             height: '0',
           },
         },
-        'gate-open': {
-          '0%': { transform: 'perspective(1200px) rotateY(0deg)' },
-          '100%': { transform: 'perspective(1200px) rotateY(-15deg)' }
-        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'gate-open': 'gate-open 1s ease-in-out forwards',
       },
     },
   },

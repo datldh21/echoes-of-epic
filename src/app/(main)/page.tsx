@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="group relative flex h-[60vh] min-h-[500px] w-full items-center justify-center overflow-hidden">
+      <section className="relative flex h-[60vh] min-h-[500px] w-full items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent z-10" />
         {heroImage && (
@@ -35,7 +35,7 @@ export default function HomePage() {
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover transition-transform duration-500 group-hover:animate-gate-open"
+            className="object-cover"
             data-ai-hint={heroImage.imageHint}
             priority
           />
@@ -44,9 +44,6 @@ export default function HomePage() {
           <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl drop-shadow-2xl text-primary">
             ÂM VANG SỬ THI
           </h1>
-          <p className="font-headline text-4xl md:text-6xl lg:text-7xl drop-shadow-2xl text-primary/90 mt-2">
-            Thành Troy
-          </p>
           <p className="mt-4 max-w-2xl font-body text-lg md:text-xl text-balance text-foreground/90 drop-shadow-lg">
           Dự án học tập số khám phá trích đoạn “Héctơ từ biệt Ăngđrômác” trong sử thi Iliad của Homer
           </p>
