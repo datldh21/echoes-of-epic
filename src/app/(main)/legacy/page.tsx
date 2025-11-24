@@ -1,14 +1,13 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { GitCompare } from "lucide-react";
 
 export default function LegacyPage() {
   return (
     <div className="flex-1 space-y-8 p-4 md:p-8">
       <div className="text-center">
         <h2 className="text-3xl font-bold tracking-tight font-headline text-primary">Nhịp Cầu Thời Gian</h2>
-        <p className="text-muted-foreground mt-2">
+        <p className="text-muted-foreground">
           Soi chiếu giá trị sử thi vào cuộc sống hiện đại.
         </p>
       </div>
