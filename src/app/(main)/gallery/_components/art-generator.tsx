@@ -76,16 +76,6 @@ export default function ArtGenerator() {
                                 rows={5}
                             />
                         </div>
-                        <div className="space-y-2">
-                             <p className="text-sm text-muted-foreground">Hoặc thử một vài gợi ý:</p>
-                             <div className="flex flex-col sm:flex-row gap-2">
-                                {examplePrompts.slice(0, 2).map((p) => (
-                                    <Button key={p} type="button" variant="outline" size="sm" className="flex-1 text-xs h-auto py-2" onClick={() => setPrompt(p)}>
-                                        {p}
-                                    </Button>
-                                ))}
-                             </div>
-                        </div>
                         <Button type="submit" disabled={isPending || !prompt} className="w-full">
                            {isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4" />}
                            {isPending ? 'Đang vẽ...' : 'Vẽ tranh'}
