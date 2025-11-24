@@ -20,27 +20,37 @@ export default function LegacyPage() {
       <main className="space-y-20">
         {/* Hero Comparison Section */}
         <section>
-          <h2 className="text-3xl font-headline mb-8 text-center text-primary/80">Anh hùng Sử thi vs. Anh hùng Hôm nay</h2>
+          <h2 className="text-3xl font-headline mb-8 text-center text-primary/80">Anh hùng Sử thi và Anh hùng Hôm nay</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="bg-card/50">
               <CardHeader>
                 <CardTitle className="font-headline text-2xl">Anh hùng Sử thi</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2 text-muted-foreground">
-                <p><strong>Đặc điểm:</strong> Sức mạnh phi thường, lòng dũng cảm, theo đuổi vinh quang cá nhân và danh dự bộ tộc.</p>
-                <p><strong>Xung đột:</strong> Giữa định mệnh và ý chí tự do, giữa tình cảm cá nhân và trách nhiệm cộng đồng.</p>
-                <p><strong>Ví dụ:</strong> Hector, Achilles.</p>
+              <CardContent>
+                <Textarea
+                  placeholder="Nhập định nghĩa của bạn về Anh hùng Sử thi..."
+                  rows={8}
+                  defaultValue="Đặc điểm: Sức mạnh phi thường, lòng dũng cảm, theo đuổi vinh quang cá nhân và danh dự bộ tộc.\n\nXung đột: Giữa định mệnh và ý chí tự do, giữa tình cảm cá nhân và trách nhiệm cộng đồng.\n\nVí dụ: Hector, Achilles."
+                />
               </CardContent>
+              <CardFooter>
+                <Button variant="outline">Lưu</Button>
+              </CardFooter>
             </Card>
             <Card className="bg-card/50">
               <CardHeader>
                 <CardTitle className="font-headline text-2xl">Anh hùng Hôm nay</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2 text-muted-foreground">
-                <p><strong>Đặc điểm:</strong> Lòng nhân ái, trí tuệ, sự cống hiến thầm lặng, dám đấu tranh cho lẽ phải và cộng đồng.</p>
-                <p><strong>Xung đột:</strong> Giữa lý tưởng và thực tế, giữa lợi ích cá nhân và sự tiến bộ xã hội.</p>
-                <p><strong>Ví dụ:</strong> Các nhà khoa học, bác sĩ, nhà hoạt động xã hội...</p>
+              <CardContent>
+                <Textarea
+                  placeholder="Nhập định nghĩa của bạn về Anh hùng Hôm nay..."
+                  rows={8}
+                  defaultValue="Đặc điểm: Lòng nhân ái, trí tuệ, sự cống hiến thầm lặng, dám đấu tranh cho lẽ phải và cộng đồng.\n\nXung đột: Giữa lý tưởng và thực tế, giữa lợi ích cá nhân và sự tiến bộ xã hội.\n\nVí dụ: Các nhà khoa học, bác sĩ, nhà hoạt động xã hội..."
+                />
               </CardContent>
+              <CardFooter>
+                <Button variant="outline">Lưu</Button>
+              </CardFooter>
             </Card>
           </div>
         </section>
