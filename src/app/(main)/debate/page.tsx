@@ -1,4 +1,7 @@
 import DebateBoard from "./_components/debate-board";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function DebatePage() {
   return (
@@ -13,6 +16,21 @@ export default function DebatePage() {
       <main>
         <DebateBoard />
       </main>
+
+      <section className="mt-24 text-center">
+        <h3 className="font-headline text-3xl text-primary flex items-center justify-center gap-3">
+          Thử tài tri thức
+        </h3>
+        <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+          Bạn có đủ mưu lược để bảo vệ thành Troy? Hãy thử tài làm người lãnh đạo.
+        </p>
+        <Button asChild size="lg" className="mt-8 group bg-primary hover:bg-primary/90">
+          <Link href="/minigame">
+            Khám phá Góc tri thức
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </Button>
+      </section>
     </div>
   );
 }
