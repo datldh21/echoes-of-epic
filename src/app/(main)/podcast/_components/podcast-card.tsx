@@ -1,12 +1,10 @@
 'use client'
 
 import Image from 'next/image';
-import { useState, useTransition } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Play, Sparkles, Loader2 } from 'lucide-react';
-import { summarizePodcastEpisode } from '@/ai/flows/summarize-podcast-episodes';
-import { useToast } from '@/hooks/use-toast';
+import { Play } from 'lucide-react';
 
 type Podcast = {
   id: number;
@@ -18,29 +16,7 @@ type Podcast = {
 };
 
 export default function PodcastCard({ podcast }: { podcast: Podcast }) {
-  const { toast } = useToast();
-  const [isPending, startTransition] = useTransition();
-  const [summary, setSummary] = useState(podcast.summary);
-
-  const handleGenerateSummary = () => {
-    startTransition(async () => {
-      toast({ title: "Đang tạo tóm tắt mới..." });
-      const result = await summarizePodcastEpisode({ episodeContent: podcast.transcript });
-      if (result.summary) {
-        setSummary(result.summary);
-        toast({
-          title: "Tạo tóm tắt thành công!",
-          description: `Tóm tắt mới cho podcast của ${podcast.speaker} đã được tạo.`,
-        });
-      } else {
-        toast({
-          variant: "destructive",
-          title: "Tạo tóm tắt thất bại",
-          description: "Đã có lỗi xảy ra. Vui lòng thử lại.",
-        });
-      }
-    });
-  };
+  const [summary] = useState(podcast.summary);
 
   return (
     <Card className="flex flex-col h-full bg-card/70 hover:bg-card transition-colors duration-300">
@@ -61,7 +37,6 @@ export default function PodcastCard({ podcast }: { podcast: Podcast }) {
       </CardHeader>
       <CardContent className="flex-grow">
         <p className="text-muted-foreground">{summary}</p>
-        {isPending && <p className="flex items-center text-sm text-primary mt-2"><Loader2 className="mr-2 h-4 w-4 animate-spin" />Đang xử lý...</p>}
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row gap-2">
         <Button variant="outline" className="w-full">
