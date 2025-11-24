@@ -3,6 +3,9 @@ import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import ArtGenerator from "./_components/art-generator";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function GalleryPage() {
     const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-art'));
@@ -52,6 +55,21 @@ export default function GalleryPage() {
 
             <section>
                 <ArtGenerator />
+            </section>
+
+            <section className="mt-24 text-center">
+                <h3 className="font-headline text-3xl text-primary flex items-center justify-center gap-3">
+                    Tham gia Diễn đàn
+                </h3>
+                <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+                    Bảo vệ quan điểm của bạn và tranh luận cùng những người khác về các quyết định của nhân vật.
+                </p>
+                <Button asChild size="lg" className="mt-8 group bg-primary hover:bg-primary/90">
+                    <Link href="/debate">
+                        Khám phá Diễn đàn
+                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                </Button>
             </section>
         </div>
     );

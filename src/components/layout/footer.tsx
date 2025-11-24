@@ -14,14 +14,6 @@ const Footer = () => {
             <p>Trích đoạn “Héc-to từ biệt Ăng-đrô-mác” (Iliad - Homer)</p>
           </div>
         </div>
-
-        <Button asChild size="lg" className="group bg-primary hover:bg-primary/90">
-            <Link href="/podcast">
-              KHÁM PHÁ PODCAST
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
-        </Button>
-
       </div>
       <div className="border-t border-white/5 py-4">
         <p className="text-center text-xs text-muted-foreground">
