@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Montserrat', 'sans-serif'],
-        headline: ['Playfair Display', 'serif'],
+        body: ['Lora', 'serif'],
+        headline: ['EB Garamond', 'serif'],
         code: ['monospace'],
       },
       colors: {
