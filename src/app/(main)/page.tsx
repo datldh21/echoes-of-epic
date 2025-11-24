@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { FEATURE_CARDS } from '@/lib/constants';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookUser, BrainCircuit, Cable, Handshake, Lightbulb, Target, Sparkles, User, BookHeart, Book } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
@@ -124,18 +124,20 @@ export default function HomePage() {
                   <CardTitle className="font-headline text-3xl text-primary/90">Sử thi Iliad & Đoạn trích</CardTitle>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-xl text-foreground mb-1">Sử thi Iliad</h4>
-                  <p className="text-lg text-muted-foreground">
-                    Ra đời vào thế kỉ VIII TCN, gồm 15.963 câu thơ, chia 24 khúc ca, kể về chiến tranh thành Troy và các anh hùng Hy Lạp.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-xl text-foreground mb-1">Đoạn trích “Héc-to từ biệt Ăng-đrô-mác”</h4>
-                   <p className="text-lg text-muted-foreground">
-                    (Câu 360–496, Khúc ca VI) – Hector từ biệt vợ con, thể hiện tình yêu gia đình, bổn phận và bi kịch của người anh hùng.
-                  </p>
+              <CardContent>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-xl text-foreground mb-1">Sử thi Iliad</h4>
+                    <p className="text-lg text-muted-foreground">
+                      Ra đời vào thế kỉ VIII TCN, gồm 15.963 câu thơ, chia 24 khúc ca, kể về chiến tranh thành Troy và các anh hùng Hy Lạp.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-xl text-foreground mb-1">Đoạn trích “Héc-to từ biệt Ăng-đrô-mác”</h4>
+                     <p className="text-lg text-muted-foreground">
+                      (Câu 360–496, Khúc ca VI) – Hector từ biệt vợ con, thể hiện tình yêu gia đình, bổn phận và bi kịch của người anh hùng.
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>

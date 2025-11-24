@@ -36,11 +36,12 @@ export const FOOTER_LINKS = [
 ];
 
 export const FEATURE_CARDS = [
-  { title: "Bảo tàng ảo 3D", description: "Khám phá không gian và câu chuyện của Iliad.", icon: BookOpen, href: "/museum" },
-  { title: "Podcast nhân vật", description: "Lắng nghe tâm tư của những người trong cuộc.", icon: Mic, href: "/podcast" },
-  { title: "Hội nghị tranh luận", description: "Bảo vệ quan điểm của bạn về các lựa chọn.", icon: Users, href: "/debate" },
-  { title: "Gallery sáng tạo", description: "Chiêm ngưỡng các tác phẩm nghệ thuật lấy cảm hứng từ sử thi.", icon: GalleryHorizontal, href: "/gallery" },
-  { title: "Minigame tương tác", description: "Thử tài chiến lược, bảo vệ thành Troy.", icon: Puzzle, href: "/minigame" },
+  { title: "Bảo tàng số", description: "Khám phá không gian và câu chuyện của Iliad.", icon: BookOpen, href: "/museum" },
+  { title: "Podcast", description: "Lắng nghe tâm tư của những người trong cuộc.", icon: Mic, href: "/podcast" },
+  { title: "Xưởng sáng tạo", description: "Chiêm ngưỡng và tạo ra các tác phẩm nghệ thuật.", icon: GalleryHorizontal, href: "/gallery" },
+  { title: "Diễn đàn", description: "Bảo vệ quan điểm của bạn về các lựa chọn.", icon: Users, href: "/debate" },
+  { title: "Góc tri thức", description: "Thử tài chiến lược, bảo vệ thành Troy.", icon: Puzzle, href: "/minigame" },
+  { title: "Nhịp cầu thời gian", description: "Soi chiếu giá trị sử thi vào cuộc sống hiện đại.", icon: GitCompare, href: "/legacy" },
 ];
 
 export const ILIAD_TIMELINE = [
@@ -141,3 +142,4 @@ export const MINIGAME_CHOICES = [
       result: "Một lựa chọn táo bạo! Tấn công tổng lực có thể tạo ra bất ngờ và giành chiến thắng quyết định, nhưng cũng đầy rủi ro. Nếu thất bại, toàn bộ quân đội có thể bị tiêu diệt. Đây là lựa chọn mà các anh hùng như Achilles hay Hector thường phải cân nhắc: giữa vinh quang chớp nhoáng và sự an nguy của cả dân tộc."
     }
   ];
+
