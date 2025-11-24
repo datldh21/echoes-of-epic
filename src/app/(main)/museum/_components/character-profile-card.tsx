@@ -32,7 +32,7 @@ export default function CharacterProfileCard({ character }: { character: Charact
         />
         <div>
           <CardTitle className="font-headline text-xl text-primary">{character.name}</CardTitle>
-          <CardDescription>{character.info["Dòng dõi"]}</CardDescription>
+          <CardDescription>{character.info["Quê quán"]}</CardDescription>
         </div>
       </CardHeader>
       <CardContent className="flex-grow space-y-4">
@@ -58,3 +58,5 @@ export default function CharacterProfileCard({ character }: { character: Charact
     </Card>
   );
 }
+
+    

@@ -1,3 +1,4 @@
+
 import {
   Home,
   BookOpen,
@@ -69,7 +70,7 @@ export const CHARACTERS = [
     name: "HÉCTƠ (HECTOR)",
     avatarId: 'hector-avatar',
     description: "Hoàng tử, tổng chỉ huy quân đội Troy. Một người chồng, người cha yêu thương gia đình nhưng đặt trách nhiệm với tổ quốc lên hàng đầu.",
-    info: { "Quê quán": "Thành Troy", "Dòng dõi": "Vua Priam", "Sứ mệnh": "Bảo vệ thành Troy" },
+    info: { "Quê quán": "Thành Troy", "Sứ mệnh": "Bảo vệ thành Troy" },
     qualities: [ "Dũng cảm", "Trách nhiệm", "Yêu thương", "Danh dự" ],
     quote: "…chiến tranh là bổn phận của mỗi người đàn ông sinh ra ở thành Ilion này, và nhất là của ta."
   },
@@ -77,7 +78,7 @@ export const CHARACTERS = [
     name: "ĂNGĐRÔMÁC (ANDROMACHE)",
     avatarId: 'andromache-avatar',
     description: "Vợ của Hector. Nàng đại diện cho tình yêu, gia đình và nỗi đau của người phụ nữ trong chiến tranh.",
-    info: { "Quê quán": "Thebe", "Dòng dõi": "Eetion", "Sứ mệnh": "Giữ gìn hạnh phúc gia đình" },
+    info: { "Quê quán": "Thebe", "Sứ mệnh": "Giữ gìn hạnh phúc gia đình" },
     qualities: [ "Vị tha", "Yêu thương", "Tinh tế", "Kiên cường" ],
     quote: "Chàng ơi, lòng can đảm của chàng sẽ giết chết chàng, chàng không biết thương đứa con thơ dại của chúng ta ư…"
   },
@@ -85,7 +86,7 @@ export const CHARACTERS = [
     name: "A-XCHI-A-NẮC (ASTYANAX)",
     avatarId: 'astyanax-avatar-new',
     description: "Biểu tượng của hy vọng, tình yêu gia đình và tương lai của Troy.",
-    info: { "Quê quán": "Thành Troy", "Dòng dõi": "Hoàng tử thành Troy", "Sứ mệnh": "Tương lai của vương quốc" },
+    info: { "Quê quán": "Thành Troy", "Sứ mệnh": "Tương lai của vương quốc" },
     qualities: [],
     quote: ""
   },
@@ -142,3 +143,5 @@ export const MINIGAME_CHOICES = [
       result: "Một lựa chọn táo bạo! Tấn công tổng lực có thể tạo ra bất ngờ và giành chiến thắng quyết định, nhưng cũng đầy rủi ro. Nếu thất bại, toàn bộ quân đội có thể bị tiêu diệt. Đây là lựa chọn mà các anh hùng như Achilles hay Hector thường phải cân nhắc: giữa vinh quang chớp nhoáng và sự an nguy của cả dân tộc."
     }
   ];
+
+    
