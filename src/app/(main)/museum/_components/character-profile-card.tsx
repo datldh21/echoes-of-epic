@@ -1,13 +1,9 @@
 'use client'
 
 import Image from 'next/image';
-import { useState, useTransition } from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import { Button } from '@/components/ui/button';
-import { generateAvatar } from '@/ai/flows/generate-ai-avatars';
-import { useToast } from '@/hooks/use-toast';
-import { Sparkles } from 'lucide-react';
+import { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 type Character = {
@@ -20,30 +16,8 @@ type Character = {
 };
 
 export default function CharacterProfileCard({ character }: { character: Character }) {
-  const { toast } = useToast();
-  const [isPending, startTransition] = useTransition();
-
   const initialAvatar = PlaceHolderImages.find(img => img.id === character.avatarId)?.imageUrl || '';
-  const [avatarUrl, setAvatarUrl] = useState(initialAvatar);
-
-  const handleGenerateAvatar = () => {
-    startTransition(async () => {
-      const result = await generateAvatar({ characterDescription: `A classical bust-style portrait of ${character.name} from Homer's Iliad, ${character.description}` });
-      if (result.avatarDataUri) {
-        setAvatarUrl(result.avatarDataUri);
-        toast({
-          title: "Tạo avatar thành công!",
-          description: `Avatar mới cho ${character.name} đã được tạo.`,
-        });
-      } else {
-        toast({
-          variant: "destructive",
-          title: "Tạo avatar thất bại",
-          description: "Đã có lỗi xảy ra. Vui lòng thử lại.",
-        });
-      }
-    });
-  };
+  const [avatarUrl] = useState(initialAvatar);
 
   return (
     <Card className="flex flex-col h-full bg-card/70 hover:bg-card transition-colors duration-300">
@@ -63,29 +37,19 @@ export default function CharacterProfileCard({ character }: { character: Charact
       <CardContent className="flex-grow space-y-4">
         <p className="text-sm text-muted-foreground">{character.description}</p>
         <div>
-          <h4 className="font-semibold mb-2">Chỉ số nhân vật</h4>
-          <div className="space-y-3">
-            {Object.entries(character.stats).map(([key, value]) => (
-              <div key={key}>
-                <div className="flex justify-between items-center mb-1 text-sm">
-                  <span className="font-medium text-foreground/80">{key}</span>
-                  <span className="text-primary font-semibold">{value}/10</span>
-                </div>
-                <Progress value={value * 10} className="h-2" />
-              </div>
+          <h4 className="font-semibold mb-3">Phẩm chất sử thi</h4>
+          <div className="flex flex-wrap gap-2">
+            {Object.keys(character.stats).map((key) => (
+              <Badge key={key} variant="secondary" className="font-normal">
+                {key}
+              </Badge>
             ))}
           </div>
         </div>
-        <blockquote className="border-l-2 border-primary pl-4 italic text-sm text-muted-foreground">
+        <blockquote className="border-l-2 border-primary pl-4 italic text-sm text-muted-foreground pt-2">
           {character.quote}
         </blockquote>
       </CardContent>
-      <CardFooter>
-        <Button onClick={handleGenerateAvatar} disabled={isPending} className="w-full">
-          <Sparkles className="mr-2 h-4 w-4" />
-          {isPending ? "Đang tạo Avatar..." : "Tạo Avatar AI mới"}
-        </Button>
-      </CardFooter>
     </Card>
   );
 }
