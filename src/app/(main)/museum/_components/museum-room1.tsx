@@ -16,7 +16,7 @@ export default function MuseumRoom1() {
       <CardContent className="space-y-12">
         {/* Timeline Section */}
         <div>
-          <h3 className="text-2xl font-headline mb-6 text-foreground/80">Timeline 10 năm cuộc chiến</h3>
+          <h3 className="text-2xl font-headline mb-6 text-center text-foreground/80">Timeline 10 năm cuộc chiến</h3>
           <div className="relative w-full">
             {/* Timeline line */}
             <div className="absolute top-10 left-0 w-full h-0.5 bg-border -z-10"></div>
@@ -25,7 +25,7 @@ export default function MuseumRoom1() {
               {ILIAD_TIMELINE.map((item, index) => (
                 <div key={item.year} className="flex flex-col items-center text-center">
                   {/* Timeline Point */}
-                  <div className="relative bg-background p-1.5 rounded-full border-2 border-primary mb-3">
+                  <div className="relative bg-background p-1.5 rounded-full border-2 border-primary mb-3 mt-1">
                      <Flame className="w-6 h-6 text-primary" />
                   </div>
                   
