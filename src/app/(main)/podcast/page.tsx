@@ -1,6 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PODCASTS } from "@/lib/constants";
 import PodcastCard from "./_components/podcast-card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight, Wand2 } from "lucide-react";
 
 export default function PodcastPage() {
   return (
@@ -12,11 +15,28 @@ export default function PodcastPage() {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {PODCASTS.map((podcast) => (
-          <PodcastCard key={podcast.id} podcast={podcast} />
-        ))}
-      </div>
+      <main>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {PODCASTS.map((podcast) => (
+            <PodcastCard key={podcast.id} podcast={podcast} />
+          ))}
+        </div>
+
+        <section className="mt-24 text-center">
+            <h3 className="font-headline text-3xl text-primary flex items-center justify-center gap-3">
+              <Wand2 /> Tự Tay Sáng Tạo
+            </h3>
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+              Sử dụng AI để tạo ra những tác phẩm nghệ thuật độc đáo lấy cảm hứng từ câu chuyện sử thi.
+            </p>
+            <Button asChild size="lg" className="mt-8 group bg-primary hover:bg-primary/90">
+              <Link href="/gallery">
+                Khám phá Gallery
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          </section>
+      </main>
     </div>
   );
 }
