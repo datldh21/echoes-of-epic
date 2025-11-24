@@ -11,7 +11,7 @@ export default function MuseumRoom1() {
   return (
     <Card className="bg-card/50 border-0 shadow-none">
       <CardHeader>
-        <CardTitle className="font-headline text-3xl text-primary text-center">Không gian chiến trận Iliad</CardTitle>
+        <CardTitle className="font-headline text-3xl text-primary text-center">Không gian chiến trận</CardTitle>
       </CardHeader>
       <CardContent className="space-y-12">
         {/* Timeline Section */}
@@ -19,7 +19,7 @@ export default function MuseumRoom1() {
           <h3 className="text-2xl font-headline mb-6 text-center text-foreground/80">Timeline 10 năm cuộc chiến</h3>
           <div className="relative w-full">
             {/* Timeline line */}
-            <div className="absolute top-10 left-0 w-full h-0.5 bg-border -z-10"></div>
+            <div className="absolute top-[50px] left-0 w-full h-0.5 bg-border -z-10"></div>
             
             <div className="grid grid-cols-4 gap-x-2 sm:gap-x-4">
               {ILIAD_TIMELINE.map((item, index) => (

@@ -21,7 +21,7 @@
     {
       "id": "andromache-avatar",
       "description": "Portrait of Andromache, a graceful woman with a look of sorrow and love.",
-      "imageUrl": "https://images.unsplash.com/photo-1609431997943-4c4ebc1c7adc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxncmVlayUyMHdvbWFufGVufDB8fHx8MTc2MzgyMjMwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1609431997943-4c4ebc1c7adc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxncmVlayUyMHdvbWFufGVufDB8fHx8fDE3NjM4MjIyMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "greek woman"
     },
     {
@@ -47,6 +47,12 @@
       "description": "Portrait of a young man with a thoughtful expression, representing a grown-up Astyanax.",
       "imageUrl": "https://images.unsplash.com/photo-1600080695930-6af670ad44fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx5b3VuZyUyMG1hbnxlbnwwfHx8fDE3NjM3MzI0Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "young man"
+    },
+    {
+      "id": "astyanax-avatar-new",
+      "description": "A 7-year old greek boy with an innocent look but exuding vitality and hope",
+      "imageUrl": "https://images.unsplash.com/photo-1603417387968-9842a8427a1c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "greek boy"
     },
     {
       "id": "gallery-art-1",

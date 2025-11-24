@@ -36,9 +36,9 @@ export const FOOTER_LINKS = [
 ];
 
 export const FEATURE_CARDS = [
-  { title: "Bảo tàng số", description: "Khám phá không gian và câu chuyện của Iliad.", icon: BookOpen, href: "/museum" },
+  { title: "Bảo tàng số", description: "Không gian triển lãm số mô phỏng, tái hiện nhân vật trong đoạn trích.", icon: BookOpen, href: "/museum" },
   { title: "Podcast", description: "Lắng nghe tâm tư của những người trong cuộc.", icon: Mic, href: "/podcast" },
-  { title: "Xưởng sáng tạo", description: "Chiêm ngưỡng và tạo ra các tác phẩm nghệ thuật.", icon: GalleryHorizontal, href: "/gallery" },
+  { title: "Xưởng sáng tạo", description: "Không gian trưng bày những sản phẩm nghệ thuật do học sinh sưu tầm và sáng tạo.", icon: GalleryHorizontal, href: "/gallery" },
   { title: "Diễn đàn", description: "Bảo vệ quan điểm của bạn về các lựa chọn.", icon: Users, href: "/debate" },
   { title: "Góc tri thức", description: "Thử tài chiến lược, bảo vệ thành Troy.", icon: Puzzle, href: "/minigame" },
   { title: "Nhịp cầu thời gian", description: "Soi chiếu giá trị sử thi vào cuộc sống hiện đại.", icon: GitCompare, href: "/legacy" },
@@ -82,12 +82,12 @@ export const CHARACTERS = [
     quote: "Chàng ơi, lòng can đảm của chàng sẽ giết chết chàng, chàng không biết thương đứa con thơ dại của chúng ta ư…"
   },
   {
-    name: "ASIN (ACHILLES)",
-    avatarId: 'achilles-avatar',
-    description: "Chiến binh vĩ đại nhất của quân Hy Lạp. Sức mạnh phi thường nhưng bị chi phối bởi lòng kiêu hãnh và cơn thịnh nộ.",
-    info: { "Quê quán": "Phthia", "Dòng dõi": "Nữ thần Thetis", "Sứ mệnh": "Giành vinh quang bất tử" },
-    qualities: [ "Mạnh mẽ", "Kiêu hãnh", "Bất khuất", "Căm hờn" ],
-    quote: "Thà chết trong vinh quang còn hơn sống trong tủi nhục."
+    name: "A-XCHI-A-NẮC (ASTYANAX)",
+    avatarId: 'astyanax-avatar-new',
+    description: "Biểu tượng của hy vọng, tình yêu gia đình và tương lai của Troy.",
+    info: { "Quê quán": "Thành Troy", "Dòng dõi": "Hoàng tử thành Troy", "Sứ mệnh": "Tương lai của vương quốc" },
+    qualities: [],
+    quote: ""
   },
 ];
 
@@ -142,4 +142,3 @@ export const MINIGAME_CHOICES = [
       result: "Một lựa chọn táo bạo! Tấn công tổng lực có thể tạo ra bất ngờ và giành chiến thắng quyết định, nhưng cũng đầy rủi ro. Nếu thất bại, toàn bộ quân đội có thể bị tiêu diệt. Đây là lựa chọn mà các anh hùng như Achilles hay Hector thường phải cân nhắc: giữa vinh quang chớp nhoáng và sự an nguy của cả dân tộc."
     }
   ];
-

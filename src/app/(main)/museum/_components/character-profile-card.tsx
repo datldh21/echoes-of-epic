@@ -1,3 +1,4 @@
+
 'use client'
 
 import Image from 'next/image';
@@ -36,19 +37,23 @@ export default function CharacterProfileCard({ character }: { character: Charact
       </CardHeader>
       <CardContent className="flex-grow space-y-4">
         <p className="text-sm text-muted-foreground">{character.description}</p>
-        <div>
-          <h4 className="font-semibold mb-3">Phẩm chất sử thi</h4>
-          <div className="grid grid-cols-2 gap-2">
-            {character.qualities.map((quality) => (
-              <Badge key={quality} variant="secondary" className="font-normal justify-center">
-                {quality}
-              </Badge>
-            ))}
+        {character.qualities && character.qualities.length > 0 && (
+          <div>
+            <h4 className="font-semibold mb-3">Phẩm chất sử thi</h4>
+            <div className="grid grid-cols-2 gap-2">
+              {character.qualities.map((quality) => (
+                <Badge key={quality} variant="secondary" className="font-normal justify-center">
+                  {quality}
+                </Badge>
+              ))}
+            </div>
           </div>
-        </div>
-        <blockquote className="border-l-2 border-primary pl-4 italic text-sm text-muted-foreground pt-2">
-          {character.quote}
-        </blockquote>
+        )}
+        {character.quote && (
+          <blockquote className="border-l-2 border-primary pl-4 italic text-sm text-muted-foreground pt-2">
+            {character.quote}
+          </blockquote>
+        )}
       </CardContent>
     </Card>
   );

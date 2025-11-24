@@ -13,7 +13,7 @@ export default function MuseumPage() {
       <header className="text-center mb-12">
         <h1 className="font-headline text-5xl md:text-6xl text-primary">DẤU ẤN SỬ THI</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          Hành trình khám phá thế giới của Iliad qua bốn không gian trưng bày.
+          Bước vào "Dấu ấn sử thi", người xem được dẫn dắt vào một hành lang 3D tái hiện ánh sáng của bảo tàng Hy Lạp cổ đại. Mỗi hiện vật, mỗi hình ảnh, mỗi mảng khắc ánh sáng đều gợi lại một lớp trầm tích của chiến tranh thành Troy - nơi tình yêu, nước mắt, vinh quang và bi kịch hoà vào nhau tạo thành bản anh hùng ca bất hủ.
         </p>
       </header>
 
@@ -21,7 +21,7 @@ export default function MuseumPage() {
         <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 max-w-3xl mx-auto h-auto sm:h-12">
           <TabsTrigger value="room1" className="py-2.5 text-base">Phòng 1: Chiến trận</TabsTrigger>
           <TabsTrigger value="room2" className="py-2.5 text-base">Phòng 2: Nhân vật</TabsTrigger>
-          <TabsTrigger value="room3" className="py-2.5 text-base">Phòng 3: Cảm xúc</TabsTrigger>
+          <TabsTrigger value="room3" className="py-2.5 text-base">Phòng 3: Gia đình</TabsTrigger>
           <TabsTrigger value="room4" className="py-2.5 text-base">Phòng 4: Hiện vật</TabsTrigger>
         </TabsList>
 
