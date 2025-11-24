@@ -8,25 +8,25 @@ body {
 
 @layer base {
   :root {
-    --background: 30 50% 92%; /* Light Parchment */
-    --foreground: 25 35% 25%; /* Dark Brown */
-    --card: 30 50% 92%;
-    --card-foreground: 25 35% 25%;
-    --popover: 30 50% 92%;
-    --popover-foreground: 25 35% 25%;
-    --primary: 25 35% 30%; /* Dark Brown for buttons */
-    --primary-foreground: 30 50% 95%; /* Light cream for button text */
-    --secondary: 30 25% 85%;
-    --secondary-foreground: 25 35% 25%;
-    --muted: 30 25% 85%;
-    --muted-foreground: 25 25% 45%;
-    --accent: 30 25% 85%;
-    --accent-foreground: 25 35% 25%;
+    --background: 45 45% 96%; /* Lighter, warmer parchment */
+    --foreground: 30 40% 10%; /* Dark sepia/brown */
+    --card: 45 40% 93%; /* Slightly darker parchment for cards */
+    --card-foreground: 30 40% 10%;
+    --popover: 45 45% 96%;
+    --popover-foreground: 30 40% 10%;
+    --primary: 30 35% 30%; /* A deep, warm brown for primary actions */
+    --primary-foreground: 45 40% 95%; /* Creamy white for text on primary */
+    --secondary: 35 30% 88%; /* A muted, slightly darker parchment */
+    --secondary-foreground: 30 35% 25%;
+    --muted: 35 30% 88%;
+    --muted-foreground: 30 25% 40%;
+    --accent: 35 30% 85%; /* Muted accent */
+    --accent-foreground: 30 35% 20%;
     --destructive: 0 70% 40.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 25% 80%;
-    --input: 30 25% 80%;
-    --ring: 25 35% 30%;
+    --border: 35 25% 80%;
+    --input: 35 25% 85%;
+    --ring: 30 35% 30%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
