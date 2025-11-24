@@ -27,7 +27,7 @@
     {
       "id": "achilles-avatar",
       "description": "Portrait of Achilles, a fierce Greek warrior with an intense, prideful gaze.",
-      "imageUrl": "https://picsum.photos/seed/achilles/100/100",
+      "imageUrl": "https://images.unsplash.com/photo-1677916042899-4a291729a5d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmaWVyY2UlMjB3YXJyaW9yfGVufDB8fHx8MTc2Mzk1OTE0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fierce warrior"
     },
     {
@@ -83,6 +83,30 @@
       "description": "Thumbnail for a video interview about modern heroism.",
       "imageUrl": "https://images.unsplash.com/photo-1637159149849-9ac4e98a3273?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbnRlcnZpZXclMjBzZXR1cHxlbnwwfHx8fDE3NjM4MjIxMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "interview setup"
+    },
+    {
+      "id": "artifact-pottery",
+      "description": "Ancient Greek pottery depicting warriors in battle, reminiscent of the Trojan War.",
+      "imageUrl": "https://images.unsplash.com/photo-1621968314479-8051a44a6e38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmNpZW50JTIwZ3JlZWslMjBwb3R0ZXJ5fGVufDB8fHx8MTc2Mzg5MjQwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient pottery"
+    },
+    {
+      "id": "artifact-helmet",
+      "description": "A well-preserved ancient Greek helmet, of the type worn by heroes like Hector and Achilles.",
+      "imageUrl": "https://images.unsplash.com/photo-1681293282248-93e1cae38b39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmVlayUyMGhlbG1ldHxlbnwwfHx8fDE3NjM4OTI0MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "greek helmet"
+    },
+    {
+      "id": "artifact-ruins",
+      "description": "The ruins of an ancient Greek temple, evoking the lost city of Troy.",
+      "imageUrl": "https://images.unsplash.com/photo-1554764125-906502018a38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmNpZW50JTIwZ3JlZWslMjBydWluc3xlbnwwfHx8fDE3NjM4OTI0MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient ruins"
+    },
+    {
+      "id": "artifact-shield",
+      "description": "A close-up of an ornate ancient Greek shield, perhaps like the one Achilles carried.",
+      "imageUrl": "https://images.unsplash.com/photo-1629302636750-5341254784d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmNpZW50JTIwZ3JlZWslMjBzaGllbGR8ZW58MHx8fHwxNzYzODkyNDAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "greek shield"
     }
   ]
 }

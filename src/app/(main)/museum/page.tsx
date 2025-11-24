@@ -2,10 +2,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import MuseumRoom1 from "./_components/museum-room1";
 import MuseumRoom2 from "./_components/museum-room2";
 import MuseumRoom3 from "./_components/museum-room3";
+import MuseumRoom4 from "./_components/museum-room4";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Mic } from "lucide-react";
-import MuseumRoom4 from "./_components/museum-room4";
 
 export default function MuseumPage() {
   return (
@@ -18,7 +18,7 @@ export default function MuseumPage() {
       </header>
 
       <Tabs defaultValue="room1" className="w-full">
-        <TabsList className="grid w-full grid-cols-1 sm:grid-cols-4 max-w-3xl mx-auto h-auto sm:h-12">
+        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 max-w-3xl mx-auto h-auto sm:h-12">
           <TabsTrigger value="room1" className="py-2.5 text-base">Phòng 1: Chiến trận</TabsTrigger>
           <TabsTrigger value="room2" className="py-2.5 text-base">Phòng 2: Nhân vật</TabsTrigger>
           <TabsTrigger value="room3" className="py-2.5 text-base">Phòng 3: Cảm xúc</TabsTrigger>
@@ -58,3 +58,5 @@ export default function MuseumPage() {
     </div>
   )
 }
+
+    
