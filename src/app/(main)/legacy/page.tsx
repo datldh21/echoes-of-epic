@@ -11,7 +11,7 @@ export default function LegacyPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <header className="text-center mb-12">
-        <h1 className="font-headline text-5xl md:text-6xl text-primary">Từ Sử Thi đến Hôm Nay</h1>
+        <h1 className="font-headline text-5xl md:text-6xl text-primary">Nhịp Cầu Thời Gian</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
           Những giá trị và bài học từ Iliad vẫn còn vang vọng và soi chiếu vào cuộc sống hiện đại của chúng ta như thế nào?
         </p>

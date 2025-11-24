@@ -23,10 +23,10 @@ export const NAV_LINKS = [
   { href: '/', label: 'Trang chủ', icon: Home },
   { href: '/museum', label: 'Bảo tàng số', icon: BookOpen },
   { href: '/podcast', label: 'Podcast', icon: Mic },
-  { href: '/gallery', label: 'Gallery', icon: GalleryHorizontal },
-  { href: '/debate', label: 'Hội nghị', icon: Users },
+  { href: '/gallery', label: 'Xưởng sáng tạo', icon: GalleryHorizontal },
+  { href: '/debate', label: 'Diễn đàn', icon: Users },
   { href: '/minigame', label: 'Góc tri thức', icon: Puzzle },
-  { href: '/legacy', label: 'Từ Sử thi đến Hôm nay', icon: GitCompare },
+  { href: '/legacy', label: 'Nhịp cầu thời gian', icon: GitCompare },
 ];
 
 export const FOOTER_LINKS = [
