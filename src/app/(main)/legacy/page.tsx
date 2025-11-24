@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function LegacyPage() {
   return (
@@ -67,6 +69,21 @@ export default function LegacyPage() {
           </CardFooter>
         </Card>
       </div>
+
+      <section className="mt-24 text-center">
+        <h3 className="font-headline text-3xl text-primary flex items-center justify-center gap-3">
+          KHÁM PHÁ BẢO TÀNG SỐ
+        </h3>
+        <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+          Nơi bạn có thể tìm hiểu về bối cảnh, nhân vật và các sự kiện chính của sử thi Iliad.
+        </p>
+        <Button asChild size="lg" className="mt-8 group bg-primary hover:bg-primary/90">
+          <Link href="/museum">
+            Quay lại Bảo tàng số
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </Button>
+      </section>
     </div>
   );
 }
