@@ -1,9 +1,13 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { FileAudio, FileVideo, Image as ImageIcon, FileText, Send, Shield, Swords } from 'lucide-react';
+import { FileAudio, FileVideo, Image as ImageIcon, FileText, Send, Shield, Swords, Info } from 'lucide-react';
+import { MINIGAME_CHOICES } from '@/lib/constants';
 
 const studentWorks = [
   { type: 'Audio', title: 'Khúc bi ca cho Hector', icon: FileAudio, imageId: 'student-work-1' },
@@ -13,6 +17,14 @@ const studentWorks = [
 ];
 
 export default function MuseumRoom3() {
+  const [selectedChoice, setSelectedChoice] = useState<number | null>(null);
+
+  const choices = [
+    { title: "Đóng cổng thành phòng thủ", icon: Shield },
+    { title: "Gửi sứ giả hoà giải", icon: Send },
+    { title: "Ra quân tổng lực", icon: Swords }
+  ];
+
   return (
     <Card className="bg-card/50 border-0 shadow-none">
       <CardHeader className="text-center">
@@ -40,10 +52,30 @@ export default function MuseumRoom3() {
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button variant="outline" className="h-auto py-4 flex-1 flex-col gap-2"><Shield /> Đóng cổng thành phòng thủ</Button>
-                    <Button variant="outline" className="h-auto py-4 flex-1 flex-col gap-2"><Send /> Gửi sứ giả hoà giải</Button>
-                    <Button variant="outline" className="h-auto py-4 flex-1 flex-col gap-2"><Swords /> Ra quân tổng lực</Button>
+                    {choices.map((choice, index) => {
+                      const Icon = choice.icon;
+                      return (
+                        <Button
+                          key={index}
+                          variant={selectedChoice === index ? 'default' : 'outline'}
+                          className="h-auto py-4 flex-1 flex-col gap-2"
+                          onClick={() => setSelectedChoice(index)}
+                        >
+                          <Icon /> {choice.title}
+                        </Button>
+                      )
+                    })}
                 </CardContent>
+                 {selectedChoice !== null && (
+                  <CardFooter className="flex-col items-start p-6">
+                      <CardTitle className="font-headline text-xl text-primary flex items-center gap-3 mb-2">
+                        <Info /> Kết quả chiến lược
+                      </CardTitle>
+                      <p className="text-base text-foreground/90 leading-relaxed">
+                        {MINIGAME_CHOICES[selectedChoice].result}
+                      </p>
+                  </CardFooter>
+                )}
             </Card>
 
             <div className="space-y-2">
