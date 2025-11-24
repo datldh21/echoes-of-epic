@@ -44,8 +44,8 @@ export default function MuseumRoom1() {
 
         {/* Interactive Map Section */}
         <div>
-          <h3 className="text-2xl font-headline mb-6 text-foreground/80">Bản đồ tương tác thành Troy</h3>
-          <p className="text-muted-foreground mb-4 max-w-prose">Di chuột qua các điểm đánh dấu trên bản đồ để khám phá các địa điểm quan trọng.</p>
+          <h3 className="text-center text-2xl font-headline mb-6 text-foreground/80">Bản đồ tương tác thành Troy</h3>
+          <p className="text-center text-muted-foreground mb-4 max-w-prose mx-auto">Di chuột qua các điểm đánh dấu trên bản đồ để khám phá các địa điểm quan trọng.</p>
           <TooltipProvider>
             <div className="relative w-full max-w-4xl mx-auto aspect-[4/3] rounded-lg overflow-hidden border-2 border-primary/20">
               {mapImage && (
