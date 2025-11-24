@@ -6,16 +6,14 @@ import { GitCompare } from "lucide-react";
 export default function LegacyPage() {
   return (
     <div className="flex-1 space-y-8 p-4 md:p-8">
-      <div className="flex items-center justify-between space-y-2">
-        <div>
-          <h2 className="text-3xl font-bold tracking-tight font-headline text-primary">Nhịp Cầu Thời Gian</h2>
-          <p className="text-muted-foreground">
-            Soi chiếu giá trị sử thi vào cuộc sống hiện đại.
-          </p>
-        </div>
+      <div className="text-center">
+        <h2 className="text-3xl font-bold tracking-tight font-headline text-primary">Nhịp Cầu Thời Gian</h2>
+        <p className="text-muted-foreground">
+          Soi chiếu giá trị sử thi vào cuộc sống hiện đại.
+        </p>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-8">
         <Card className="flex flex-col">
           <CardHeader>
             <CardTitle className="font-headline text-xl">Anh hùng Sử thi</CardTitle>
@@ -44,6 +42,24 @@ export default function LegacyPage() {
           <CardContent className="flex-grow">
              <Textarea 
               placeholder="Nhập quan điểm của bạn về anh hùng ngày nay..."
+              className="h-full min-h-[200px] resize-none"
+            />
+          </CardContent>
+          <CardFooter>
+            <Button>Gửi</Button>
+          </CardFooter>
+        </Card>
+
+        <Card className="flex flex-col">
+          <CardHeader>
+            <CardTitle className="font-headline text-xl">Góc suy ngẫm</CardTitle>
+            <CardDescription>
+            Tuổi trẻ Việt Nam hôm nay cần làm gì để thể hiện trách nhiệm của bản thân đối với quê hương, đất nước?
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+             <Textarea 
+              placeholder="Nhập quan điểm của bạn..."
               className="h-full min-h-[200px] resize-none"
             />
           </CardContent>
