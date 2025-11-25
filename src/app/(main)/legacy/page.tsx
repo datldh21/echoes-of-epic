@@ -1,10 +1,77 @@
+'use client';
+
+import { useState, useTransition } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2, Send } from "lucide-react";
+import { useToast } from '@/hooks/use-toast';
 
 export default function LegacyPage() {
+  const [epicHero, setEpicHero] = useState('');
+  const [modernHero, setModernHero] = useState('');
+  const [reflection, setReflection] = useState('');
+  const { toast } = useToast();
+  const [isSubmitting, startTransition] = useTransition();
+
+  const handleSubmit = () => {
+    if (!epicHero && !modernHero && !reflection) {
+      toast({
+        variant: 'destructive',
+        title: 'Vui lòng nhập suy nghĩ của bạn',
+        description: 'Bạn cần điền ít nhất một trong các ô để gửi.',
+      });
+      return;
+    }
+
+    const data = {
+      'anh_hung_su_thi': epicHero,
+      'anh_hung_hom_nay': modernHero,
+      'goc_suy_ngam': reflection,
+      'thoi_gian': new Date().toISOString(),
+    };
+
+    startTransition(async () => {
+      try {
+        const response = await fetch('https://sheetdb.io/api/v1/g2m0uwyd05ole', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ data: [data] })
+        });
+
+        if (response.ok) {
+          setEpicHero('');
+          setModernHero('');
+          setReflection('');
+          toast({
+            title: "Gửi thành công!",
+            description: "Cảm ơn bạn đã chia sẻ suy nghĩ. Câu trả lời của bạn đã được ghi lại.",
+          });
+        } else {
+          throw new Error('Failed to submit answers.');
+        }
+      } catch (error) {
+        console.error(error);
+        toast({
+          variant: "destructive",
+          title: "Gửi thất bại!",
+          description: "Đã có lỗi xảy ra. Vui lòng thử lại sau.",
+        });
+      }
+    });
+  };
+
+  const renderSubmitButton = () => (
+    <Button onClick={handleSubmit} disabled={isSubmitting}>
+      {isSubmitting ? <Loader2 className="animate-spin" /> : <Send />}
+      {isSubmitting ? 'Đang gửi...' : 'Gửi'}
+    </Button>
+  );
+
   return (
     <div className="flex-1 space-y-8 p-4 md:p-8">
       <div className="text-center">
@@ -26,10 +93,12 @@ export default function LegacyPage() {
             <Textarea 
               placeholder="Nhập quan điểm của bạn về anh hùng sử thi..."
               className="h-full min-h-[150px] resize-none"
+              value={epicHero}
+              onChange={(e) => setEpicHero(e.target.value)}
             />
           </CardContent>
           <CardFooter className="justify-center">
-            <Button>Gửi</Button>
+            {renderSubmitButton()}
           </CardFooter>
         </Card>
 
@@ -44,10 +113,12 @@ export default function LegacyPage() {
              <Textarea 
               placeholder="Nhập quan điểm của bạn về anh hùng ngày nay..."
               className="h-full min-h-[150px] resize-none"
+              value={modernHero}
+              onChange={(e) => setModernHero(e.target.value)}
             />
           </CardContent>
           <CardFooter className="justify-center">
-            <Button>Gửi</Button>
+            {renderSubmitButton()}
           </CardFooter>
         </Card>
 
@@ -62,10 +133,12 @@ export default function LegacyPage() {
              <Textarea 
               placeholder="Chia sẻ suy nghĩ của bạn..."
               className="h-full min-h-[150px] resize-none"
+              value={reflection}
+              onChange={(e) => setReflection(e.target.value)}
             />
           </CardContent>
           <CardFooter className="justify-center">
-            <Button>Gửi</Button>
+            {renderSubmitButton()}
           </CardFooter>
         </Card>
       </div>
