@@ -25,11 +25,6 @@ export default function MuseumRoom4() {
                 className="object-cover w-full h-full aspect-video transition-transform duration-500 group-hover:scale-110"
                 data-ai-hint={image.imageHint}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
-                <div className="absolute bottom-0 left-0 p-4">
-                  <p className="text-white text-lg font-semibold">{image.description}</p>
-                </div>
-              </div>
             </div>
           ))}
         </div>
@@ -37,5 +32,3 @@ export default function MuseumRoom4() {
     </Card>
   );
 }
-
-    
