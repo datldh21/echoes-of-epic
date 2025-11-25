@@ -93,25 +93,25 @@
     {
       "id": "artifact-pottery",
       "description": "Ancient Greek pottery depicting warriors in battle, reminiscent of the Trojan War.",
-      "imageUrl": "https://images.unsplash.com/photo-1761472013094-0daf2e234053?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhbmNpZW50JTIwcG90dGVyeXxlbnwwfDB8fHwxNzMxNTAyNjMxfDE&ixlib=rb-4.0.3&q=85&w=1080",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/1.jpg",
       "imageHint": "ancient pottery"
     },
     {
       "id": "artifact-helmet",
       "description": "A well-preserved ancient Greek helmet, of the type worn by heroes like Hector and Achilles.",
-      "imageUrl": "https://images.unsplash.com/photo-1575419001506-ca514725329c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxncmVlayUyMGhlbG1ldHxlbnwwfDB8fHwxNzMxNTAyNjg1fDE&ixlib=rb-4.0.3&q=85&w=1080",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/2.jpg",
       "imageHint": "greek helmet"
     },
     {
       "id": "artifact-ruins",
       "description": "The ruins of an ancient Greek temple, evoking the lost city of Troy.",
-      "imageUrl": "https://images.unsplash.com/photo-1717518213955-455025e3b0bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YW5jaWVudCUyMHJ1aW5zfGVufDB8MHx8fDE3MzE1MDI3MTl8MQ&ixlib=rb-4.0.3&q=85&w=1080",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/3.jpg",
       "imageHint": "ancient ruins"
     },
     {
       "id": "artifact-shield",
       "description": "A close-up of an ornate ancient Greek shield, perhaps like the one Achilles carried.",
-      "imageUrl": "https://images.unsplash.com/photo-1728245779577-6fc5193892ad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxncmVlayUyMHNoaWVsZHxlbnwwfDB8fHwxNzMxNTAyNzQ3fDE&ixlib=rb-4.0.3&q=85&w=1080",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/5.jpg",
       "imageHint": "greek shield"
     }
   ]
