@@ -20,6 +20,10 @@ export default function GalleryPage() {
             </header>
 
             <section className="mb-20">
+                <ArtGenerator />
+            </section>
+
+            <section className="mb-20">
                 <h2 className="text-3xl font-headline mb-6 text-center text-primary/80">Bộ sưu tập</h2>
                 <Carousel
                     opts={{
