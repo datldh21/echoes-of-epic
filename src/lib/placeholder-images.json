@@ -15,13 +15,13 @@
     {
       "id": "hector-avatar",
       "description": "Portrait of Hector, a noble Trojan warrior with a determined but weary expression.",
-      "imageUrl": "https://images.unsplash.com/photo-1615672969032-45c313ae0a2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxncmVlayUyMHdhcnJpb3J8ZW58MHx8fHwxNzYzODIyMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/4.jpg",
       "imageHint": "greek warrior"
     },
     {
       "id": "andromache-avatar",
       "description": "Portrait of Andromache, a graceful woman with a look of sorrow and love.",
-      "imageUrl": "https://images.unsplash.com/photo-1609431997943-4c4ebc1c7adc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxncmVlayUyMHdvbWFufGVufDB8fHx8fDE3NjM4MjIyMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/6.jpg",
       "imageHint": "greek woman"
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": "astyanax-avatar-new",
       "description": "A 7-year old greek boy with an innocent look but exuding vitality and hope",
-      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/astyanax.jpg",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/8.jpg",
       "imageHint": "greek boy"
     },
     {
