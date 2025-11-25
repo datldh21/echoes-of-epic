@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Play, Pause } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import { Progress } from '@/components/ui/progress';
 
 type Podcast = {
   id: number;
@@ -27,6 +28,7 @@ const DEMO_AUDIO_URL = "https://storage.googleapis.com/iwiki_test/test_uploads/f
 
 export default function PodcastCard({ podcast, isPlaying, onPlay }: PodcastCardProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [progress, setProgress] = useState(0);
   
   useEffect(() => {
     if (!audioRef.current) {
@@ -36,13 +38,22 @@ export default function PodcastCard({ podcast, isPlaying, onPlay }: PodcastCardP
     
     const handleAudioEnd = () => {
         onPlay(); // Toggle off when audio ends
+        setProgress(0);
+    };
+
+    const handleTimeUpdate = () => {
+      if (audio.duration) {
+        setProgress((audio.currentTime / audio.duration) * 100);
+      }
     };
 
     audio.addEventListener('ended', handleAudioEnd);
+    audio.addEventListener('timeupdate', handleTimeUpdate);
 
     return () => {
       audio.pause();
       audio.removeEventListener('ended', handleAudioEnd);
+      audio.removeEventListener('timeupdate', handleTimeUpdate);
     };
   }, [onPlay]);
 
@@ -52,9 +63,11 @@ export default function PodcastCard({ podcast, isPlaying, onPlay }: PodcastCardP
         audioRef.current.play().catch(e => console.error("Audio play failed:", e));
       } else {
         audioRef.current.pause();
-        // Optional: Reset audio to start when another track is played
+        // Reset progress when paused if it's not the currently playing track
         if (audioRef.current.currentTime > 0) {
-            audioRef.current.currentTime = 0;
+            // Let's not reset time, just progress visual
+            // audioRef.current.currentTime = 0;
+            if(!isPlaying) setProgress(0);
         }
       }
     }
@@ -82,16 +95,18 @@ export default function PodcastCard({ podcast, isPlaying, onPlay }: PodcastCardP
         <p className="text-muted-foreground">{podcast.summary}</p>
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row gap-2">
-        <Button variant="outline" className="w-full" onClick={onPlay}>
+        <Button variant="outline" className="w-full relative" onClick={onPlay}>
           {isPlaying ? (
             <>
               <Pause className="mr-2 h-4 w-4" />
               Tạm dừng
+              <Progress value={progress} className="absolute bottom-0 left-0 w-full h-1" />
             </>
           ) : (
             <>
               <Play className="mr-2 h-4 w-4" />
               Phát Podcast
+              { progress > 0 && <Progress value={progress} className="absolute bottom-0 left-0 w-full h-1" /> }
             </>
           )}
         </Button>
