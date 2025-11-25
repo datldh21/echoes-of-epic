@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Play, Pause } from 'lucide-react';
+import { Play, Pause, RotateCcw } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { Progress } from '@/components/ui/progress';
 
@@ -63,15 +63,21 @@ export default function PodcastCard({ podcast, isPlaying, onPlay }: PodcastCardP
         audioRef.current.play().catch(e => console.error("Audio play failed:", e));
       } else {
         audioRef.current.pause();
-        // Reset progress when paused if it's not the currently playing track
-        if (audioRef.current.currentTime > 0) {
-            // Let's not reset time, just progress visual
-            // audioRef.current.currentTime = 0;
-            if(!isPlaying) setProgress(0);
-        }
       }
     }
   }, [isPlaying]);
+
+  const handleReplay = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      if (!isPlaying) {
+        onPlay(); // This will trigger the useEffect to play
+      } else {
+        // If it's already playing, just seek to 0 and it will continue
+        audioRef.current.play().catch(e => console.error("Audio play failed:", e));
+      }
+    }
+  };
 
 
   return (
@@ -109,6 +115,9 @@ export default function PodcastCard({ podcast, isPlaying, onPlay }: PodcastCardP
               { progress > 0 && <Progress value={progress} className="absolute bottom-0 left-0 w-full h-1" /> }
             </>
           )}
+        </Button>
+        <Button variant="ghost" size="icon" onClick={handleReplay} aria-label="Phát lại">
+          <RotateCcw className="h-5 w-5" />
         </Button>
       </CardFooter>
     </Card>
