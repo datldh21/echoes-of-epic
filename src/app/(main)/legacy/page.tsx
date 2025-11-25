@@ -7,8 +7,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Loader2, Send } from "lucide-react";
 import { useToast } from '@/hooks/use-toast';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export default function LegacyPage() {
+  const [name, setName] = useState('');
   const [epicHero, setEpicHero] = useState('');
   const [modernHero, setModernHero] = useState('');
   const [reflection, setReflection] = useState('');
@@ -16,16 +19,25 @@ export default function LegacyPage() {
   const [isSubmitting, startTransition] = useTransition();
 
   const handleSubmit = () => {
+    if (!name.trim()) {
+      toast({
+        variant: 'destructive',
+        title: 'Vui lòng nhập tên của bạn',
+        description: 'Bạn cần điền tên trước khi gửi.',
+      });
+      return;
+    }
     if (!epicHero && !modernHero && !reflection) {
       toast({
         variant: 'destructive',
         title: 'Vui lòng nhập suy nghĩ của bạn',
-        description: 'Bạn cần điền ít nhất một trong các ô để gửi.',
+        description: 'Bạn cần điền ít nhất một trong các ô suy ngẫm để gửi.',
       });
       return;
     }
 
     const data = {
+      'ten_cua_ban': name,
       'anh_hung_su_thi': epicHero,
       'anh_hung_hom_nay': modernHero,
       'goc_suy_ngam': reflection,
@@ -44,6 +56,7 @@ export default function LegacyPage() {
         });
 
         if (response.ok) {
+          setName('');
           setEpicHero('');
           setModernHero('');
           setReflection('');
@@ -65,13 +78,6 @@ export default function LegacyPage() {
     });
   };
 
-  const renderSubmitButton = () => (
-    <Button onClick={handleSubmit} disabled={isSubmitting}>
-      {isSubmitting ? <Loader2 className="animate-spin" /> : <Send />}
-      {isSubmitting ? 'Đang gửi...' : 'Gửi'}
-    </Button>
-  );
-
   return (
     <div className="flex-1 space-y-8 p-4 md:p-8">
       <div className="text-center">
@@ -82,6 +88,16 @@ export default function LegacyPage() {
       </div>
 
       <div className="max-w-2xl mx-auto space-y-8">
+        <div className="space-y-2">
+            <Label htmlFor="name" className="text-lg font-semibold text-foreground/90">Tên của bạn</Label>
+            <Input 
+                id="name" 
+                placeholder="Nhập tên của bạn..." 
+                value={name} 
+                onChange={(e) => setName(e.target.value)} 
+            />
+        </div>
+
         <Card className="flex flex-col">
           <CardHeader>
             <CardTitle className="font-headline text-xl">Anh hùng Sử thi</CardTitle>
@@ -97,9 +113,6 @@ export default function LegacyPage() {
               onChange={(e) => setEpicHero(e.target.value)}
             />
           </CardContent>
-          <CardFooter className="justify-center">
-            {renderSubmitButton()}
-          </CardFooter>
         </Card>
 
         <Card className="flex flex-col">
@@ -117,9 +130,6 @@ export default function LegacyPage() {
               onChange={(e) => setModernHero(e.target.value)}
             />
           </CardContent>
-          <CardFooter className="justify-center">
-            {renderSubmitButton()}
-          </CardFooter>
         </Card>
 
         <Card className="flex flex-col">
@@ -137,10 +147,14 @@ export default function LegacyPage() {
               onChange={(e) => setReflection(e.target.value)}
             />
           </CardContent>
-          <CardFooter className="justify-center">
-            {renderSubmitButton()}
-          </CardFooter>
         </Card>
+
+        <div className="flex justify-center pt-4">
+            <Button onClick={handleSubmit} disabled={isSubmitting} size="lg">
+                {isSubmitting ? <Loader2 className="animate-spin" /> : <Send />}
+                {isSubmitting ? 'Đang gửi...' : 'Gửi toàn bộ câu trả lời'}
+            </Button>
+        </div>
       </div>
 
       <section className="mt-24 text-center">
