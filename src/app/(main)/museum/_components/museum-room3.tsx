@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { FileAudio, FileVideo, Image as ImageIcon, FileText, Send, Shield, Swords, Info } from 'lucide-react';
+import { FileAudio, FileVideo, Image as ImageIcon, FileText, Send, Shield, Swords, Info, Download } from 'lucide-react';
 import { MINIGAME_CHOICES } from '@/lib/constants';
 import { useToast } from '@/hooks/use-toast';
 
@@ -17,15 +17,73 @@ const studentWorks = [
   { type: 'Thơ', title: 'Lời từ biệt gửi gió', icon: FileText, imageId: 'gallery-art-2' },
 ];
 
+interface StoredAnswer {
+  question1: string;
+  question2: string;
+  question3: string;
+  strategicChoice: string | null;
+  timestamp: string;
+}
+
 export default function MuseumRoom3() {
   const [selectedChoice, setSelectedChoice] = useState<number | null>(null);
+  const [answer1, setAnswer1] = useState('');
+  const [answer2, setAnswer2] = useState('');
+  const [answer3, setAnswer3] = useState('');
+  const [allAnswers, setAllAnswers] = useState<StoredAnswer[]>([]);
   const { toast } = useToast();
 
   const handleSendAnswers = () => {
+    if (!answer1 && !answer2 && !answer3 && selectedChoice === null) {
+      toast({
+        variant: "destructive",
+        title: "Chưa có câu trả lời",
+        description: "Vui lòng nhập câu trả lời hoặc chọn một chiến lược.",
+      });
+      return;
+    }
+
+    const newAnswer: StoredAnswer = {
+      question1: answer1,
+      question2: answer2,
+      question3: answer3,
+      strategicChoice: selectedChoice !== null ? MINIGAME_CHOICES[selectedChoice].title : null,
+      timestamp: new Date().toISOString(),
+    };
+    
+    setAllAnswers(prev => [...prev, newAnswer]);
+    
+    setAnswer1('');
+    setAnswer2('');
+    setAnswer3('');
+    setSelectedChoice(null);
+
     toast({
       title: "Gửi thành công!",
-      description: "Cảm ơn bạn đã chia sẻ suy nghĩ của mình.",
+      description: "Cảm ơn bạn đã chia sẻ suy nghĩ của mình. Câu trả lời của bạn đã được ghi lại.",
     });
+  };
+
+  const handleDownload = () => {
+    if (allAnswers.length === 0) {
+      toast({
+        variant: "destructive",
+        title: "Không có dữ liệu",
+        description: "Chưa có câu trả lời nào được ghi lại để tải xuống.",
+      });
+      return;
+    }
+
+    const jsonString = JSON.stringify(allAnswers, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'answers.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
   const choices = [
@@ -46,11 +104,11 @@ export default function MuseumRoom3() {
           <div className="space-y-8 max-w-2xl mx-auto">
             <div className="space-y-2">
               <label htmlFor="q1" className="text-lg font-semibold text-foreground/90">Nếu bạn là Andromache, bạn sẽ nói thêm điều gì với Hector trước khi chàng ra trận?</label>
-              <Input id="q1" placeholder="Chia sẻ suy nghĩ của bạn..." />
+              <Input id="q1" value={answer1} onChange={e => setAnswer1(e.target.value)} placeholder="Chia sẻ suy nghĩ của bạn..." />
             </div>
             <div className="space-y-2">
               <label htmlFor="q2" className="text-lg font-semibold text-foreground/90">Đứng trước lời khẩn cầu tha thiết của Andromache, nếu bạn là Hector, bạn có suy nghĩ, thái độ và cách ứng xử như thế nào?</label>
-              <Input id="q2" placeholder="Chia sẻ suy nghĩ của bạn..." />
+              <Input id="q2" value={answer2} onChange={e => setAnswer2(e.target.value)} placeholder="Chia sẻ suy nghĩ của bạn..." />
             </div>
 
             <Card className="bg-transparent border-0 shadow-none">
@@ -86,10 +144,11 @@ export default function MuseumRoom3() {
 
             <div className="space-y-2">
               <label htmlFor="q3" className="text-lg font-semibold text-foreground/90">Khoảnh khắc Hector bế con trai Astyanax gợi cho bạn liên tưởng gì đến hình ảnh người cha trong cuộc sống hôm nay?</label>
-              <Input id="q3" placeholder="Chia sẻ liên tưởng của bạn..." />
+              <Input id="q3" value={answer3} onChange={e => setAnswer3(e.target.value)} placeholder="Chia sẻ liên tưởng của bạn..." />
             </div>
-             <div className="flex justify-center">
-              <Button onClick={handleSendAnswers}>Gửi câu trả lời</Button>
+             <div className="flex justify-center gap-4">
+              <Button onClick={handleSendAnswers}><Send /> Gửi câu trả lời</Button>
+              <Button onClick={handleDownload} variant="outline"><Download /> Tải xuống</Button>
             </div>
           </div>
         </div>
