@@ -21,6 +21,10 @@ export default function GalleryPage() {
             </header>
 
             <section className="mb-20">
+                <ArtGenerator />
+            </section>
+
+            <section className="mb-20">
                 <h2 className="text-3xl font-headline mb-6 text-center text-primary/80">Bộ sưu tập</h2>
                 <Carousel
                     opts={{
@@ -31,7 +35,7 @@ export default function GalleryPage() {
                 >
                     <CarouselContent>
                         {galleryImages.map((image, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                            <CarouselItem key={index} className="lg:basis-1/2">
                                 <div className="p-1">
                                     <Card className="overflow-hidden">
                                         <CardContent className="p-0 flex aspect-video items-center justify-center">
@@ -71,5 +75,3 @@ export default function GalleryPage() {
         </div>
     );
 }
-
-    
