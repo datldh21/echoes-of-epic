@@ -30,15 +30,15 @@ export default function GalleryPage() {
                 >
                     <CarouselContent>
                         {galleryImages.map((image, index) => (
-                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                            <CarouselItem key={index} className="md:basis-full lg:basis-1/2">
                                 <div className="p-1">
                                     <Card className="overflow-hidden">
                                         <CardContent className="p-0 flex aspect-video items-center justify-center">
                                             <Image
                                                 src={image.imageUrl}
                                                 alt={image.description}
-                                                width={600}
-                                                height={400}
+                                                width={800}
+                                                height={450}
                                                 className="object-cover w-full h-full"
                                                 data-ai-hint={image.imageHint}
                                             />
