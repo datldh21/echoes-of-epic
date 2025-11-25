@@ -39,13 +39,13 @@
     {
       "id": "homer-avatar",
       "description": "A bust-like image of Homer, the blind poet of ancient Greece.",
-      "imageUrl": "https://images.unsplash.com/photo-1741850419919-55e213274453?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxncmVlayUyMGJ1c3R8ZW58MHx8fHwxNzYzODIyMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/Homer.jpg",
       "imageHint": "greek bust"
     },
     {
       "id": "astyanax-avatar",
       "description": "Portrait of a young man with a thoughtful expression, representing a grown-up Astyanax.",
-      "imageUrl": "https://images.unsplash.com/photo-1600080695930-6af670ad44fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx5b3VuZyUyMG1hbnxlbnwwfHx8fDE3NjM3MzI0Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/8.jpg",
       "imageHint": "young man"
     },
     {
