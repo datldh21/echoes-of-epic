@@ -8,7 +8,7 @@ export default function MuseumRoom4() {
   return (
     <Card className="bg-card/50 border-0 shadow-none">
       <CardHeader className="text-center">
-        <CardTitle className="font-headline text-3xl text-primary">Phòng 4: Hiện vật</CardTitle>
+        <CardTitle className="font-headline text-3xl text-primary">Hiện vật</CardTitle>
         <CardDescription>
           Chiêm ngưỡng những hiện vật khảo cổ và các tác phẩm nghệ thuật, giúp tái hiện lại thế giới của sử thi Iliad.
         </CardDescription>

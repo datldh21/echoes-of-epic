@@ -1,12 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { FileAudio, FileVideo, Image as ImageIcon, FileText, Send, Shield, Swords, Info, Download } from 'lucide-react';
+import { FileAudio, FileVideo, Image as ImageIcon, FileText, Send, Shield, Swords, Info, Download, Loader2 } from 'lucide-react';
 import { MINIGAME_CHOICES } from '@/lib/constants';
 import { useToast } from '@/hooks/use-toast';
 
@@ -23,6 +23,7 @@ export default function MuseumRoom3() {
   const [answer2, setAnswer2] = useState('');
   const [answer3, setAnswer3] = useState('');
   const { toast } = useToast();
+  const [isSubmitting, startTransition] = useTransition();
 
   const handleSendAnswers = () => {
     if (!answer1 && !answer2 && !answer3 && selectedChoice === null) {
@@ -33,16 +34,48 @@ export default function MuseumRoom3() {
       });
       return;
     }
-    
-    // Clear inputs after "sending"
-    setAnswer1('');
-    setAnswer2('');
-    setAnswer3('');
-    setSelectedChoice(null);
 
-    toast({
-      title: "Gửi thành công!",
-      description: "Cảm ơn bạn đã chia sẻ suy nghĩ của mình. Câu trả lời của bạn đã được ghi lại.",
+    const strategy = selectedChoice !== null ? MINIGAME_CHOICES[selectedChoice].title : '';
+
+    const data = {
+      'cau_hoi_1': answer1,
+      'cau_hoi_2': answer2,
+      'chien_luoc': strategy,
+      'cau_hoi_3': answer3,
+      'thoi_gian': new Date().toISOString(),
+    };
+
+    startTransition(async () => {
+      try {
+        const response = await fetch('https://sheetdb.io/api/v1/y44ph23cd2ctb', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ data })
+        });
+
+        if (response.ok) {
+          setAnswer1('');
+          setAnswer2('');
+          setAnswer3('');
+          setSelectedChoice(null);
+          toast({
+            title: "Gửi thành công!",
+            description: "Cảm ơn bạn đã chia sẻ suy nghĩ. Câu trả lời của bạn đã được ghi lại.",
+          });
+        } else {
+          throw new Error('Failed to submit answers.');
+        }
+      } catch (error) {
+        console.error(error);
+        toast({
+          variant: "destructive",
+          title: "Gửi thất bại!",
+          description: "Đã có lỗi xảy ra. Vui lòng thử lại sau.",
+        });
+      }
     });
   };
 
@@ -107,7 +140,10 @@ export default function MuseumRoom3() {
               <Input id="q3" value={answer3} onChange={e => setAnswer3(e.target.value)} placeholder="Chia sẻ liên tưởng của bạn..." />
             </div>
              <div className="flex justify-center gap-4">
-              <Button onClick={handleSendAnswers}><Send /> Gửi câu trả lời</Button>
+              <Button onClick={handleSendAnswers} disabled={isSubmitting}>
+                {isSubmitting ? <Loader2 className="animate-spin" /> : <Send />}
+                {isSubmitting ? 'Đang gửi...' : 'Gửi câu trả lời'}
+              </Button>
             </div>
           </div>
         </div>
