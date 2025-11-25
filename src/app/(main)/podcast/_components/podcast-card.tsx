@@ -16,41 +16,50 @@ type Podcast = {
   transcript: string;
 };
 
+type PodcastCardProps = {
+  podcast: Podcast;
+  isPlaying: boolean;
+  onPlay: () => void;
+};
+
+
 const DEMO_AUDIO_URL = "https://storage.googleapis.com/iwiki_test/test_uploads/file_example_WAV_5MG.wav";
 
-export default function PodcastCard({ podcast }: { podcast: Podcast }) {
-  const [isPlaying, setIsPlaying] = useState(false);
+export default function PodcastCard({ podcast, isPlaying, onPlay }: PodcastCardProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
+  
   useEffect(() => {
-    // We only want to create the Audio object on the client-side
-    audioRef.current = new Audio(DEMO_AUDIO_URL);
-
+    if (!audioRef.current) {
+        audioRef.current = new Audio(DEMO_AUDIO_URL);
+    }
     const audio = audioRef.current;
-
+    
     const handleAudioEnd = () => {
-      setIsPlaying(false);
+        onPlay(); // Toggle off when audio ends
     };
 
     audio.addEventListener('ended', handleAudioEnd);
 
-    // Cleanup on component unmount
     return () => {
       audio.pause();
       audio.removeEventListener('ended', handleAudioEnd);
     };
-  }, []);
+  }, [onPlay]);
 
-  const handlePlayPause = () => {
+  useEffect(() => {
     if (audioRef.current) {
       if (isPlaying) {
-        audioRef.current.pause();
+        audioRef.current.play().catch(e => console.error("Audio play failed:", e));
       } else {
-        audioRef.current.play();
+        audioRef.current.pause();
+        // Optional: Reset audio to start when another track is played
+        if (audioRef.current.currentTime > 0) {
+            audioRef.current.currentTime = 0;
+        }
       }
-      setIsPlaying(!isPlaying);
     }
-  };
+  }, [isPlaying]);
+
 
   return (
     <Card className="flex flex-col h-full bg-card/70 hover:bg-card transition-colors duration-300">
@@ -73,7 +82,7 @@ export default function PodcastCard({ podcast }: { podcast: Podcast }) {
         <p className="text-muted-foreground">{podcast.summary}</p>
       </CardContent>
       <CardFooter className="flex flex-col sm:flex-row gap-2">
-        <Button variant="outline" className="w-full" onClick={handlePlayPause}>
+        <Button variant="outline" className="w-full" onClick={onPlay}>
           {isPlaying ? (
             <>
               <Pause className="mr-2 h-4 w-4" />

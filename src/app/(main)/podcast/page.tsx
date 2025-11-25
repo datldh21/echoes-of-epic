@@ -1,11 +1,15 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+'use client';
+
+import { useState } from "react";
 import { PODCASTS } from "@/lib/constants";
 import PodcastCard from "./_components/podcast-card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Wand2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function PodcastPage() {
+  const [playingPodcastId, setPlayingPodcastId] = useState<number | null>(null);
+
   return (
     <div className="container mx-auto px-4 py-12">
       <header className="text-center mb-12">
@@ -18,7 +22,12 @@ export default function PodcastPage() {
       <main>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {PODCASTS.map((podcast) => (
-            <PodcastCard key={podcast.id} podcast={podcast} />
+            <PodcastCard 
+              key={podcast.id} 
+              podcast={podcast}
+              isPlaying={playingPodcastId === podcast.id}
+              onPlay={() => setPlayingPodcastId(playingPodcastId === podcast.id ? null : podcast.id)}
+            />
           ))}
         </div>
 
