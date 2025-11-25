@@ -17,20 +17,11 @@ const studentWorks = [
   { type: 'Thơ', title: 'Lời từ biệt gửi gió', icon: FileText, imageId: 'gallery-art-2' },
 ];
 
-interface StoredAnswer {
-  question1: string;
-  question2: string;
-  question3: string;
-  strategicChoice: string | null;
-  timestamp: string;
-}
-
 export default function MuseumRoom3() {
   const [selectedChoice, setSelectedChoice] = useState<number | null>(null);
   const [answer1, setAnswer1] = useState('');
   const [answer2, setAnswer2] = useState('');
   const [answer3, setAnswer3] = useState('');
-  const [allAnswers, setAllAnswers] = useState<StoredAnswer[]>([]);
   const { toast } = useToast();
 
   const handleSendAnswers = () => {
@@ -42,17 +33,8 @@ export default function MuseumRoom3() {
       });
       return;
     }
-
-    const newAnswer: StoredAnswer = {
-      question1: answer1,
-      question2: answer2,
-      question3: answer3,
-      strategicChoice: selectedChoice !== null ? MINIGAME_CHOICES[selectedChoice].title : null,
-      timestamp: new Date().toISOString(),
-    };
     
-    setAllAnswers(prev => [...prev, newAnswer]);
-    
+    // Clear inputs after "sending"
     setAnswer1('');
     setAnswer2('');
     setAnswer3('');
@@ -62,28 +44,6 @@ export default function MuseumRoom3() {
       title: "Gửi thành công!",
       description: "Cảm ơn bạn đã chia sẻ suy nghĩ của mình. Câu trả lời của bạn đã được ghi lại.",
     });
-  };
-
-  const handleDownload = () => {
-    if (allAnswers.length === 0) {
-      toast({
-        variant: "destructive",
-        title: "Không có dữ liệu",
-        description: "Chưa có câu trả lời nào được ghi lại để tải xuống.",
-      });
-      return;
-    }
-
-    const jsonString = JSON.stringify(allAnswers, null, 2);
-    const blob = new Blob([jsonString], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'answers.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
   };
 
   const choices = [
@@ -148,7 +108,6 @@ export default function MuseumRoom3() {
             </div>
              <div className="flex justify-center gap-4">
               <Button onClick={handleSendAnswers}><Send /> Gửi câu trả lời</Button>
-              <Button onClick={handleDownload} variant="outline"><Download /> Tải xuống</Button>
             </div>
           </div>
         </div>
