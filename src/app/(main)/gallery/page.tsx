@@ -1,3 +1,4 @@
+
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,17 +21,13 @@ export default function GalleryPage() {
             </header>
 
             <section className="mb-20">
-                <ArtGenerator />
-            </section>
-
-            <section className="mb-20">
                 <h2 className="text-3xl font-headline mb-6 text-center text-primary/80">Bộ sưu tập</h2>
                 <Carousel
                     opts={{
                         align: "start",
                         loop: true,
                     }}
-                    className="w-full max-w-4xl mx-auto"
+                    className="w-full max-w-6xl mx-auto"
                 >
                     <CarouselContent>
                         {galleryImages.map((image, index) => (
@@ -74,3 +71,5 @@ export default function GalleryPage() {
         </div>
     );
 }
+
+    

@@ -55,22 +55,58 @@
       "imageHint": "greek boy"
     },
     {
+      "id": "gallery-art-0",
+      "description": "Ancient Greek pottery depicting warriors in battle, reminiscent of the Trojan War.",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/1.jpg",
+      "imageHint": "ancient pottery"
+    },
+    {
       "id": "gallery-art-1",
-      "description": "AI-generated artwork of Hector tenderly removing his plumed helmet to comfort his young son.",
-      "imageUrl": "https://images.unsplash.com/photo-1605812830455-2fadc55bc4ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYXRoZXIlMjBzb258ZW58MHx8fHwxNzYzODIyMzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "father son"
+      "description": "A well-preserved ancient Greek helmet, of the type worn by heroes like Hector and Achilles.",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/2.jpg",
+      "imageHint": "greek helmet"
     },
     {
       "id": "gallery-art-2",
-      "description": "AI-generated artwork of the poignant farewell between Hector and Andromache at the gates of Troy.",
-      "imageUrl": "https://images.unsplash.com/photo-1637164063547-4c4eb6a40c29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzYWQlMjBmYXJld2VsbHxlbnwwfHx8fDE3NjM4MjIzMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "sad farewell"
+      "description": "The ruins of an ancient Greek temple, evoking the lost city of Troy.",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/3.jpg",
+      "imageHint": "ancient ruins"
     },
     {
       "id": "gallery-art-3",
-      "description": "Student-created infographic about the main characters of the Iliad.",
-      "imageUrl": "https://images.unsplash.com/photo-1635183783375-98e857771351?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmZvZ3JhcGhpYyUyMGRlc2lnbnxlbnwwfHx8fDE3NjM4MjIzMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "infographic design"
+      "description": "Portrait of Hector, a noble Trojan warrior with a determined but weary expression.",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/4.jpg",
+      "imageHint": "greek warrior"
+    },
+    {
+      "id": "gallery-art-4",
+      "description": "A close-up of an ornate ancient Greek shield, perhaps like the one Achilles carried.",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/5.jpg",
+      "imageHint": "greek shield"
+    },
+    {
+      "id": "gallery-art-5",
+      "description": "Portrait of Andromache, a graceful woman with a look of sorrow and love.",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/6.jpg",
+      "imageHint": "greek woman"
+    },
+    {
+      "id": "gallery-art-6",
+      "description": "A dramatic battle scene in front of the walls of Troy.",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/7.jpg",
+      "imageHint": "Troy battle"
+    },
+    {
+      "id": "gallery-art-7",
+      "description": "Portrait of a young man with a thoughtful expression, representing a grown-up Astyanax.",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/8.jpg",
+      "imageHint": "young man"
+    },
+    {
+      "id": "gallery-art-8",
+      "description": "A bust-like image of Homer, the blind poet of ancient Greece.",
+      "imageUrl": "https://storage.googleapis.com/iwiki_test/test_uploads/Homer.jpg",
+      "imageHint": "greek bust"
     },
     {
       "id": "student-work-1",
