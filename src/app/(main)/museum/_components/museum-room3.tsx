@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { FileAudio, FileVideo, Image as ImageIcon, FileText, Send, Shield, Swords, Info } from 'lucide-react';
 import { MINIGAME_CHOICES } from '@/lib/constants';
+import { useToast } from '@/hooks/use-toast';
 
 const studentWorks = [
   { type: 'Audio', title: 'Khúc bi ca cho Hector', icon: FileAudio, imageId: 'student-work-1' },
@@ -18,6 +19,14 @@ const studentWorks = [
 
 export default function MuseumRoom3() {
   const [selectedChoice, setSelectedChoice] = useState<number | null>(null);
+  const { toast } = useToast();
+
+  const handleSendAnswers = () => {
+    toast({
+      title: "Gửi thành công!",
+      description: "Cảm ơn bạn đã chia sẻ suy nghĩ của mình.",
+    });
+  };
 
   const choices = [
     { title: "Đóng cổng thành phòng thủ", icon: Shield },
@@ -80,7 +89,7 @@ export default function MuseumRoom3() {
               <Input id="q3" placeholder="Chia sẻ liên tưởng của bạn..." />
             </div>
              <div className="flex justify-center">
-              <Button>Gửi câu trả lời</Button>
+              <Button onClick={handleSendAnswers}>Gửi câu trả lời</Button>
             </div>
           </div>
         </div>
