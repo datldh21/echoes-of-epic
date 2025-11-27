@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ILIAD_TIMELINE, TROY_MAP_LOCATIONS } from '@/lib/constants';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { ILIAD_TIMELINE } from '@/lib/constants';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Flame } from 'lucide-react';
 
@@ -42,36 +41,21 @@ export default function MuseumRoom1() {
           </div>
         </div>
 
-        {/* Interactive Map Section */}
+        {/* QR Code Section */}
         <div>
-          <h3 className="text-center text-2xl font-headline mb-6 text-foreground/80">Bản đồ tương tác thành Troy</h3>
-          <p className="text-center text-muted-foreground mb-4 max-w-prose mx-auto">Di chuột qua các điểm đánh dấu trên bản đồ để khám phá các địa điểm quan trọng.</p>
-          <TooltipProvider>
-            <div className="relative w-full max-w-4xl mx-auto aspect-[4/3] rounded-lg overflow-hidden border-2 border-primary/20">
-              {mapImage && (
-                <Image
-                  src={mapImage.imageUrl}
-                  alt={mapImage.description}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={mapImage.imageHint}
-                />
-              )}
-              {TROY_MAP_LOCATIONS.map((loc) => (
-                <Tooltip key={loc.name}>
-                  <TooltipTrigger
-                    className="absolute w-4 h-4 rounded-full bg-accent animate-pulse"
-                    style={{ top: loc.top, left: loc.left }}
-                    aria-label={`Tooltip for ${loc.name}`}
-                  />
-                  <TooltipContent>
-                    <p className="font-bold">{loc.name}</p>
-                    <p>{loc.description}</p>
-                  </TooltipContent>
-                </Tooltip>
-              ))}
-            </div>
-          </TooltipProvider>
+          <h3 className="text-center text-2xl font-headline mb-6 text-foreground/80">Quét mã để trải nghiệm</h3>
+          <p className="text-center text-muted-foreground mb-4 max-w-prose mx-auto">Sử dụng điện thoại của bạn để quét mã QR và khám phá một trải nghiệm tương tác độc đáo.</p>
+          <div className="relative w-full max-w-sm mx-auto aspect-square rounded-lg overflow-hidden border-2 border-primary/20">
+            {mapImage && (
+              <Image
+                src={mapImage.imageUrl}
+                alt={mapImage.description}
+                fill
+                className="object-contain"
+                data-ai-hint={mapImage.imageHint}
+              />
+            )}
+          </div>
         </div>
       </CardContent>
     </Card>

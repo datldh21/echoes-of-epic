@@ -8,9 +8,9 @@
     },
     {
       "id": "troy-map",
-      "description": "An old, parchment-style map depicting the city of Troy and its surroundings.",
-      "imageUrl": "https://images.unsplash.com/photo-1716814031008-07685ad2614b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YW5jaWVudCUyMG1hcHxlbnwwfHx8fDE3NjM3MjYyMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ancient map"
+      "description": "QR Code for an interactive experience.",
+      "imageUrl": "https://storage.googleapis.com/iwiki-prod-uploads/b70c3a81-d13c-4467-b52e-503487f975d0.png",
+      "imageHint": "QR code"
     },
     {
       "id": "hector-avatar",
